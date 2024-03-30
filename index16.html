@@ -1,0 +1,6477 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/vendor/owl/assets/owl.carousel.css">
+    <link rel="stylesheet" href="assets/vendor/owl/assets/owl.theme.default.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="/assets/vendor/swiper/swiper-bundle.min.js">
+
+    <style>
+        @font-face {
+            src: url(assets/vendor/fonts/iranyekan/Qs_Iranyekan\ thin.ttf);
+            font-family: iranyekan;
+            font-weight: 100;
+        }
+
+        @font-face {
+            src: url(assets/vendor/fonts/iranyekan/Qs_Iranyekan\ light.ttf);
+            font-family: iranyekan;
+            font-weight: 200;
+        }
+
+        @font-face {
+            src: url(assets/vendor/fonts/iranyekan/Qs_Iranyekan.ttf);
+            font-family: iranyekan;
+            font-weight: 300;
+        }
+
+        @font-face {
+            src: url(assets/vendor/fonts/iranyekan/Qs_Iranyekan\ medium.ttf);
+            font-family: iranyekan;
+            font-weight: 400;
+        }
+
+        @font-face {
+            src: url(assets/vendor/fonts/iranyekan/Qs_Iranyekan\ bold.ttf);
+            font-family: iranyekan;
+            font-weight: 500;
+        }
+
+        @font-face {
+            src: url(assets/vendor/fonts/iranyekan/Qs_Iranyekan\ extrabold.ttf);
+            font-family: iranyekan;
+            font-weight: 600;
+        }
+
+        @font-face {
+            src: url(assets/vendor/fonts/iranyekan/Qs_Iranyekan\ black.ttf);
+            font-family: iranyekan;
+            font-weight: 700;
+        }
+
+        @font-face {
+            src: url(assets/vendor/fonts/iranyekan/Qs_Iranyekan\ extrablack.ttf);
+            font-family: iranyekan;
+            font-weight: 800;
+        }
+
+        @font-face {
+            src: url(/assets/vendor/fonts/morabba/Morabba-Bold.ttf);
+            font-family: "Morabba";
+        }
+
+        body {
+            margin: 0;
+            background-color: rgb(242, 243, 243);
+        }
+
+        nav a,
+        ul {
+            color: rgb(4, 30, 66);
+            text-decoration: none;
+            list-style-type: none;
+        }
+
+        nav {
+            height: 145px;
+            background-color: #f5c34b;
+        }
+
+        nav>div:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            height: 90px;
+            border-bottom: 1px solid rgba(117, 120, 125, 0.5);
+
+        }
+
+        nav>div:nth-child(1)>div:nth-child(1) {
+            margin-right: 40px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-left: 20px;
+            gap: 20px;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(1)>a {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 18px;
+            width: 116px;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(1)>div {
+            display: flex;
+            flex-direction: row;
+            text-align: center;
+            height: 50px;
+
+        }
+
+        nav>div:nth-child(1)>div:nth-child(1)>div>div a {
+            color: #f5c34b;
+            font-size: x-small;
+            margin-top: 6px;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(1)>div>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(4, 30, 66);
+            width: 50px;
+            height: 50px;
+            border-radius: 40px 0 0 40px;
+
+        }
+
+        nav>div:nth-child(1)>div:nth-child(1)>div select {
+            font-family: iranyekan;
+            font-weight: 400;
+            font-size: xx-small;
+            outline: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 150px;
+            height: 50px;
+            margin: 0;
+            border: none;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(1)>div input {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding-right: 20px;
+            font-family: iranyekan;
+            font-weight: 400;
+            font-size: xx-small;
+            width: 500px;
+            height: 50px;
+            outline: none;
+            border: none;
+            margin: 0;
+            border-radius: 0 40px 40px 0;
+
+        }
+
+        nav>div:nth-child(1)>div:nth-child(1)>div input::placeholder {
+            color: rgb(4, 30, 66);
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 8px;
+            margin-left: 40px;
+            gap: 16px;
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div:hover {
+            background-color: rgb(4, 30, 66);
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)>div:hover {
+            background-color: rgb(4, 30, 66);
+            transition: 0.5s all;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)>div:hover a {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(3)>div:hover {
+            background-color: rgb(4, 30, 66);
+            transition: 0.5s all;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(3)>div:hover a {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(4)>div:hover {
+            background-color: rgb(4, 30, 66);
+            transition: 0.5s all;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(4)>div:hover a {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(1)>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 48px;
+            width: 62px;
+            font-size: x-small;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(2) {
+            width: 250px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(2)>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 48px;
+            width: 80px;
+            font-size: x-small;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(3) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(3)>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 48px;
+            width: 64px;
+            font-size: x-small;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(4) {
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(4)>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 48px;
+            width: 69px;
+            font-size: x-small;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(4)>div:nth-child(2) {
+            position: absolute;
+            top: 1px;
+            left: 45px;
+            border: 1px solid black;
+            border-radius: 50%;
+            height: 15px;
+            width: 15px;
+            font-size: 8px;
+        }
+
+        nav>div:nth-child(1)>div:nth-child(2)>div:nth-child(4)>div:nth-child(2) a {
+            position: absolute;
+            bottom: -5px;
+            left: 4px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: end;
+
+        }
+
+        nav>div:nth-child(2) {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 17px;
+            margin-left: 40px;
+            margin-right: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: -6px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) ul {
+            position: absolute;
+            list-style: none;
+            margin: 0;
+            background-color: white;
+            padding: 0px;
+            right: 5px;
+            top: 43px;
+            width: 290px;
+            height: 520px;
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: 6px;
+            box-shadow: 5px 1px 50px 1px rgb(224, 224, 224);
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) ul li a {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 17px;
+            color: rgb(83, 81, 81);
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) ul li:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: start;
+            width: 270px;
+            gap: 10px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) ul li:nth-child(1) i:nth-child(3) {
+            margin-right: 65px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 270px;
+            height: 30px;
+            padding-top: 20px;
+            padding-right: 20px;
+            border-bottom: 3px solid rgb(230, 230, 230);
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) ul li:hover {
+            background-color: rgb(241, 241, 241);
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1) i {
+            font-size: medium;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) div {
+            margin-left: 55px;
+            margin-right: 10px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+        nav>div:nth-child(2)>div:nth-child(1) ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            padding: 0;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li {
+            position: relative;
+            margin-left: 35px;
+        }
+
+
+
+
+
+
+
+
+
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:first-child>ul {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            list-style: none;
+            margin: 0;
+            background-color: white;
+            padding: 10px;
+            right: -15px;
+            top: 43px;
+            z-index: 10;
+            width: 200px;
+            box-shadow: 5px 1px 50px 1px rgb(224, 224, 224);
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:first-child>ul li {
+            margin-top: 2px;
+            margin-bottom: -9px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 100%;
+            color: rgb(83, 81, 81);
+            margin-right: 40px;
+            height: 50px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:first-child>ul li:first-of-type {
+            padding-top: 10px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:first-child>ul li:last-of-type {
+            padding-bottom: 20px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:first-child>ul li a {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 10px;
+            color: rgb(83, 81, 81);
+        }
+
+
+
+
+
+
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:last-of-type>ul {
+            position: absolute;
+            display: none;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            list-style: none;
+            margin: 0;
+            background-color: white;
+            padding: 10px;
+            right: -10px;
+            top: 43px;
+            z-index: 10;
+            width: 200px;
+            box-shadow: 5px 1px 50px 1px rgb(224, 224, 224);
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:last-of-type>ul li {
+            margin-top: 2px;
+            margin-bottom: -9px;
+            height: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            width: 100%;
+            margin-right: 40px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:last-of-type>ul li:first-of-type {
+            padding-top: 10px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:last-of-type>ul li:last-of-type {
+            padding-bottom: 20px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul li:last-of-type>ul li a {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 10px;
+            color: rgb(83, 81, 81);
+        }
+
+
+
+
+
+
+
+
+
+
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(2)>div {
+            position: absolute;
+            display: none;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            list-style: none;
+            margin: 0;
+            background-color: white;
+            padding-top: 40px;
+            padding-right: 30px;
+            right: -285px;
+            top: 43px;
+            z-index: 10;
+            width: 1450px;
+            gap: 60px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(2)>div>div {
+            margin-top: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: white;
+            height: 300px;
+            /* width: 300px; */
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(2)>div>div>a {
+            font-size: 18px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(2)>div>div ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(2)>div>div ul li {
+            margin-top: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 5px;
+            background-color: white;
+
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(2)>div>div ul li>a {
+            font-size: 15px;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(3)>div {
+            position: absolute;
+            display: none;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: flex-start;
+            list-style: none;
+            margin: 0;
+            background-color: white;
+            padding-top: 40px;
+            padding-right: 30px;
+            right: 10px;
+            top: 43px;
+            z-index: 10;
+            width: 880px;
+            gap: 60px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(3)>div>div {
+            margin-top: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            background-color: white;
+            height: 250px;
+            /* width: 300px; */
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(3)>div>div>a {
+            font-size: 18px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(3)>div>div ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(3)>div>div ul li {
+            margin-top: 2px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            height: 5px;
+            background-color: white;
+
+        }
+
+        nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(3)>div>div ul li>a {
+            font-size: 15px;
+        }
+
+
+
+
+
+
+
+
+
+
+        nav>div:nth-child(2):nth-child(2) ul {
+            gap: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav>div:nth-child(3) {
+            display: none;
+        }
+
+        nav>div:nth-child(4) {
+            display: none;
+        }
+
+        main {
+            margin: 40px;
+        }
+
+
+        #hero {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        #hero>div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 30px;
+        }
+
+        #hero>div:nth-child(1)>div:first-child {
+            width: 75%;
+            height: 590px;
+            border-radius: 6px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding-right: 100px;
+        }
+
+        #hero>div:nth-child(1)>div:first-child>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            width: 40%;
+            margin-left: 50px;
+        }
+
+        #hero>div:nth-child(1)>div:first-child>div a {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 50px;
+            text-decoration: none;
+            line-height: 72px;
+            color: rgb(4, 30, 66);
+        }
+
+        #hero>div:nth-child(1)>div:first-child>div a:hover:first-of-type {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #hero>div:nth-child(1)>div:first-child>div span {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 16px;
+            color: rgb(4, 30, 66);
+        }
+
+        #hero>div:nth-child(1)>div:first-child>div button {
+            background-color: #f5c34b;
+            outline: none;
+            width: 200px;
+            height: 50px;
+            text-align: center;
+            line-height: 45px;
+            border-radius: 3px;
+            padding-left: 36px;
+            padding-right: 36px;
+            margin-top: 22px;
+            border: none;
+        }
+
+        #hero>div:nth-child(1)>div:first-child>div button a {
+            text-decoration: none;
+            color: rgb(4, 30, 66);
+            line-height: 50px;
+            font-family: iranyekan;
+            font-weight: 300;
+            font-size: 4px;
+        }
+
+
+
+        #hero>div:nth-child(1)>div:last-child {
+            width: 25%;
+            height: 590px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            gap: 30px;
+            background-color: rgb(242, 243, 243);
+
+        }
+
+        #hero>div:nth-child(1)>div:last-child>div {
+            border-radius: 6px;
+            width: 100%;
+            height: 50%;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #hero>div:nth-child(1)>div:last-child>div>a {
+            width: 35%;
+        }
+
+        #hero>div:nth-child(1)>div:last-child>div>div {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+            width: 50%;
+        }
+
+        #hero>div:nth-child(1)>div:last-child>div>div span {
+            color: rgb(68, 50, 151);
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 10px;
+        }
+
+        #hero>div:nth-child(1)>div:last-child>div>div a {
+            text-decoration: none;
+        }
+
+        #hero>div:nth-child(1)>div:last-child>div>div>a:last-child {
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 300;
+            font-size: 13px;
+            position: relative;
+        }
+
+        /* #hero>div:nth-child(1)>div:last-child>div>div>a:last-child::before {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 3px;
+            background-color: rgb(4, 30, 66);
+            opacity: 0.7;
+            top: 28px;
+            left: 10px;
+        }
+
+        #hero>div:nth-child(1)>div:last-child>div>div>a:last-child:hover::before {
+            width: 100%;
+            transition: 0.5s all;
+        } */
+
+        #hero>div:nth-child(1)>div:last-child>div>div>a:hover:last-child {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #hero>div:nth-child(1)>div:last-child>div>div>a:first-of-type {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 24px;
+            color: rgb(4, 30, 66);
+        }
+
+        #hero>div:nth-child(1)>div:last-child>div>div>a:first-of-type:hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #hero>div:nth-child(2) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 30px;
+
+        }
+
+        #hero>div:nth-child(2)>div:first-child {
+            width: 80%;
+            height: 280px;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 30px;
+        }
+
+        #hero>div:nth-child(2)>div:first-child>div {
+            border-radius: 6px;
+            width: 33.333%;
+            background-color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        #hero>div:nth-child(2)>div:first-child>div>img {
+            width: 37%;
+            margin-right: 20px;
+        }
+
+
+        #hero>div:nth-child(2)>div:first-child>div>div {
+            display: flex;
+            flex-direction: column;
+            margin-left: 15px;
+            width: 50%;
+        }
+
+        #hero>div:nth-child(2)>div:first-child>div>div span {
+            color: rgb(68, 50, 151);
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 10px;
+        }
+
+        #hero>div:nth-child(2)>div:first-child>div>div a {
+            text-decoration: none;
+        }
+
+        #hero>div:nth-child(2)>div:first-child>div>div>a:last-child {
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 300;
+            font-size: 13px;
+            position: relative;
+        }
+
+        /* #hero>div:nth-child(2)>div:first-child>div>div>a:last-child::before {
+            content: "";
+            position: absolute;
+            width: 32px;
+            height: 3px;
+            background-color: rgb(4, 30, 66);
+            opacity: 0.8;
+            top: 28px;
+            left: 4px;
+        }
+
+        #hero>div:nth-child(2)>div:first-child>div>div>a:last-child:hover::before {
+            width: 100%;
+            transition: 0.5s all;
+        } */
+
+        #hero>div:nth-child(2)>div:first-child>div>div a:hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #hero>div:nth-child(2)>div:first-child>div>div>a:nth-child(2) {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 24px;
+            color: rgb(4, 30, 66);
+        }
+
+        #hero>div:nth-child(2)>div:first-child>div>div>a:nth-child(2):hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #hero>div:nth-child(2)>div:last-child {
+            width: 25%;
+            border-radius: 6px;
+            height: 280px;
+            background-color: white;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        #hero>div:nth-child(2)>div:last-child>img {
+            width: 37%;
+            /* margin-right: 30px; */
+        }
+
+        #hero>div:nth-child(2)>div:last-child>div {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+
+        #hero>div:nth-child(2)>div:last-child>div span {
+            color: rgb(68, 50, 151);
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 10px;
+        }
+
+        #hero>div:nth-child(2)>div:last-child>div a {
+            text-decoration: none;
+
+        }
+
+        #hero>div:nth-child(2)>div:last-child>div>a:last-child {
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 300;
+            font-size: 13px;
+            position: relative;
+        }
+
+        #hero>div:nth-child(2)>div:last-child>div a:hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #hero>div:nth-child(2)>div:last-child>div>a:first-of-type {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 24px;
+            color: rgb(4, 30, 66);
+        }
+
+        #hero>div:nth-child(2)>div:last-child>div>a:first-of-type:hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+
+        #categories1 {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            padding: 30px 30px 30px 30px;
+            border-radius: 6px;
+        }
+
+        #categories1>div:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 1px solid rgb(235, 235, 235);
+            line-height: 1.7px;
+            height: 45px;
+        }
+
+        #categories1>div:nth-child(1) h3 {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+            text-align: start;
+            margin-top: -8px;
+            color: rgb(4, 30, 66);
+        }
+
+        #categories1>div:nth-child(1) span {
+            font-family: iranyekan;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: start;
+            color: rgb(4, 30, 66);
+        }
+
+        #categories1>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+            width: 100%;
+            margin-right: 30px;
+            margin-top: 30px;
+            margin-bottom: 25px;
+        }
+
+        #categories1>div:nth-child(2)>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+            width: 30%;
+            height: 30%;
+
+        }
+
+        #categories1>div:nth-child(2)>div>img {
+            width: 30%;
+            height: 30%;
+            margin-top: 35px;
+        }
+
+        #categories1>div:nth-child(2)>div:nth-child(8)>img {
+            height: 70px;
+            width: 30px;
+        }
+
+        #categories1>div:nth-child(2)>div>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #categories1>div:nth-child(2)>div:last-child {
+            margin-right: -40px;
+        }
+
+        #categories1>div:nth-child(2)>div>div a {
+            font-family: iranyekan;
+            font-weight: 300;
+            font-size: 6px;
+            word-spacing: 3px;
+            text-decoration: none;
+
+        }
+
+        #categories1>div:nth-child(2)>div>div a:nth-child(1) {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        #categories1>div:nth-child(2)>div>div a:nth-child(1):hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #bestseller {
+            width: calc(100% - 60px);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: start;
+            padding-top: 40px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+            padding: 30px 30px 40px 30px;
+            border-radius: 6px;
+
+        }
+
+        #bestseller>div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.25px solid rgb(235, 235, 235);
+            margin-top: -40px;
+            margin-bottom: -21px;
+            height: 90px;
+        }
+
+        #bestseller>div:nth-child(1) h3 {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+            text-align: start;
+
+        }
+
+        #bestseller>div:nth-child(1)>div a {
+            text-decoration: none;
+            padding-bottom: 5px;
+            margin-left: 14px;
+            margin-right: 14px;
+            color: rgb(85, 84, 84);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #bestseller>div:nth-child(1)>div>a:nth-child(4) {
+            margin-right: 18px;
+        }
+
+        #bestseller>div:nth-child(1)>div>a:nth-child(4)::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            top: 30px;
+            position: absolute;
+            background-color: black;
+        }
+
+        #bestseller>div:nth-child(2) {
+            width: 100%;
+        }
+
+        #bestseller>div:nth-child(2) ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            list-style: none;
+            margin-right: -40px;
+            position: relative;
+        }
+
+        #bestseller>div:nth-child(2) ul li {
+            height: 310px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 35px 0px 30px 0px;
+            border: 1.25px solid rgb(235, 235, 235);
+        }
+
+        #bestseller>div:nth-child(2) ul li>a {
+            height: 50%;
+            position: relative;
+        }
+
+        #bestseller>div:nth-child(2) ul li>a>img {
+
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #bestseller>div:nth-child(2) ul li>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            width: 100%;
+        }
+
+        #bestseller>div:nth-child(2) ul li>div a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #bestseller>div:nth-child(2) ul li>div>a:nth-child(1) {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            color: gray;
+        }
+
+        #bestseller>div:nth-child(2) ul li>div>a:nth-child(1):hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #bestseller>div:nth-child(2) ul li>div>a:nth-child(2) {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 28px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #bestseller>div:nth-child(2) ul li>div>a:nth-child(2):hover {
+            color: rgb(76, 8, 140);
+            transition: 0.5s all;
+            text-decoration: underline;
+        }
+
+        #bestseller>div:nth-child(2) ul li>div span {
+            line-height: 26px;
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        #bestseller>div:nth-child(3) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 15px;
+            gap: 20px;
+            position: absolute;
+        }
+
+        #bestseller>div:nth-child(3)>div {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-direction: row;
+            gap: 160px;
+        }
+
+        #bestseller>div:nth-child(3)>div>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            gap: 8px;
+        }
+
+        #bestseller>div:nth-child(3)>div>div>a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: rgb(4, 30, 66);
+            font-size: 18px;
+            background-color: #f9fcff;
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+        }
+
+        #bestseller>div:nth-child(3)>div>a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            color: rgb(5, 98, 230);
+            font-size: 18px;
+            background-color: #f9fcff;
+            height: 36px;
+            width: 36px;
+            border-radius: 50%;
+
+        }
+
+        #digital {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px 30px 30px 30px;
+            border-radius: 6px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        #digital>div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.25px solid rgb(235, 235, 235);
+        }
+
+        #digital>div:nth-child(1) h3 {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+            text-align: start;
+            margin-bottom: 14px;
+            margin-top: -2px;
+            color: rgb(4, 30, 66);
+        }
+
+        #digital>div:nth-child(1)>div {
+            margin-top: -20px;
+        }
+
+        #digital>div:nth-child(1)>div a {
+            text-decoration: none;
+            padding-bottom: 5px;
+            margin-left: 14px;
+            margin-right: 14px;
+            color: #6e6e6e;
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #digital>div:nth-child(1)>div a:nth-child(4) {
+            margin-right: 18px;
+        }
+
+        #digital>div:nth-child(1)>div a:nth-child(4)::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            top: 30px;
+            position: absolute;
+            background-color: black;
+        }
+
+        #digital>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            list-style: none;
+            gap: 50px;
+            width: 100%;
+        }
+
+        #digital>div:nth-child(2)>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            background-image: url(/assets/img/digital.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            padding-top: 40px;
+            padding-right: 40px;
+            border-radius: 6px;
+            margin-top: 5px;
+            height: 170px;
+            padding-bottom: 250px;
+            margin-left: -10px;
+            width: 220px;
+        }
+
+        #digital>div:nth-child(2)>div>span:first-child {
+            color: rgb(5, 98, 230);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        #digital>div:nth-child(2)>div>span:last-of-type {
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+        #digital>div:nth-child(2)>div>a {
+            text-decoration: none;
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #digital>div:nth-child(2)>div>a::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(4, 30, 66);
+            width: 30px;
+            height: 1px;
+            top: 28px;
+            left: 1px;
+        }
+
+        #digital ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            list-style: none;
+            gap: 30px;
+            width: 80%;
+        }
+
+        #digital>div:nth-child(2)>a>img {
+            margin-top: 6px;
+            height: 900px;
+            object-fit: contain;
+        }
+
+        #digital ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            position: relative;
+        }
+
+        #digital ul li>a:nth-child(1)>img {
+            width: 100%;
+            height: 170px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+
+        #digital ul li>div:first-of-type {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin-top: 35px;
+            width: 100%;
+        }
+
+        #digital ul li>div:first-of-type a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #digital ul li>div:first-of-type a:nth-child(1) {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            color: gray;
+        }
+
+        #digital ul li>div:first-of-type a:nth-child(2) {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 28px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #digital ul li>div:first-of-type span {
+            line-height: 26px;
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+        #digital ul li>div:last-of-type a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #digital ul li>div:last-of-type {
+            display: none;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: absolute;
+            top: 10px;
+            gap: 15px;
+        }
+
+        #digital ul li>div:last-of-type>div:first-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            gap: 75px;
+        }
+
+        #digital ul li>div:last-of-type>div:first-child>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: start;
+            gap: 10px;
+        }
+
+        #digital ul li>div:last-of-type>div:first-child>div>a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+        }
+
+        #digital ul li>div:last-of-type>div:first-child>div>a>i {
+            font-size: 10px;
+        }
+
+        #digital ul li>div:last-of-type>div:first-child>a {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            font-size: 10px;
+            color: #2828f7;
+        }
+
+        #digital ul li>div:last-of-type>div:last-child {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            margin-right: 18px;
+            background-color: #f5c34b;
+            height: 50px;
+            width: 125px;
+        }
+
+        #digital ul li>div:last-of-type>div:last-child>a {
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 2px;
+            text-align: center;
+        }
+
+        #digital ul li:hover div:last-of-type {
+            display: flex;
+        }
+
+
+        #furniture {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px 30px 30px 30px;
+            border-radius: 6px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        #furniture>div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.25px solid rgb(235, 235, 235);
+        }
+
+        #furniture>div:nth-child(1) h3 {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+            text-align: start;
+            margin-bottom: 14px;
+            margin-top: -2px;
+        }
+
+        #furniture>div:nth-child(1)>div {
+            margin-top: -20px;
+        }
+
+        #furniture>div:nth-child(1)>div a {
+            text-decoration: none;
+            padding-bottom: 5px;
+            margin-left: 14px;
+            margin-right: 14px;
+            color: rgb(85, 84, 84);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #furniture>div:nth-child(1)>div a:nth-child(4) {
+            margin-right: 18px;
+        }
+
+        #furniture>div:nth-child(1)>div a:nth-child(4)::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            top: 30px;
+            position: absolute;
+            background-color: black;
+        }
+
+        #furniture>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            list-style: none;
+            gap: 50px;
+            width: 100%;
+        }
+
+        #furniture>div:nth-child(2)>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            background-image: url(/assets/img/furniture.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            padding-top: 40px;
+            padding-right: 40px;
+            border-radius: 6px;
+            margin-top: 5px;
+            height: 170px;
+            padding-bottom: 250px;
+            margin-left: -10px;
+            width: 220px;
+        }
+
+        #furniture>div:nth-child(2)>div>span:first-child {
+            color: rgb(5, 98, 230);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        #furniture>div:nth-child(2)>div>span:last-of-type {
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+        #furniture>div:nth-child(2)>div>a {
+            text-decoration: none;
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #furniture>div:nth-child(2)>div>a::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(4, 30, 66);
+            width: 30px;
+            height: 1px;
+            top: 28px;
+            left: 1px;
+        }
+
+        #furniture ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            list-style: none;
+            gap: 30px;
+            width: 80%;
+        }
+
+        #furniture>div:nth-child(2)>a>img {
+            margin-top: 6px;
+            height: 900px;
+            object-fit: contain;
+        }
+
+        #furniture ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        #furniture ul li>a:nth-child(1)>img {
+            width: 100%;
+            height: 170px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+
+        #furniture ul li>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin-top: 35px;
+            width: 100%;
+        }
+
+        #furniture ul li>div a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #furniture ul li>div a:nth-child(1) {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            color: gray;
+        }
+
+        #furniture ul li>div a:nth-child(2) {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 28px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #furniture ul li>div span {
+            line-height: 26px;
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+
+
+        #beauty {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px 30px 30px 30px;
+            border-radius: 6px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #beauty>div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.25px solid rgb(235, 235, 235);
+        }
+
+        #beauty>div:nth-child(1) h3 {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+            text-align: start;
+            margin-bottom: 14px;
+            margin-top: -2px;
+        }
+
+        #beauty>div:nth-child(1)>div {
+            margin-top: -20px;
+        }
+
+        #beauty>div:nth-child(1)>div a {
+            text-decoration: none;
+            padding-bottom: 5px;
+            margin-left: 14px;
+            margin-right: 14px;
+            color: rgb(85, 84, 84);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #beauty>div:nth-child(1)>div a:nth-child(4) {
+            margin-right: 18px;
+        }
+
+        #beauty>div:nth-child(1)>div a:nth-child(4)::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            top: 30px;
+            position: absolute;
+            background-color: black;
+        }
+
+        #beauty>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            list-style: none;
+            gap: 50px;
+            width: 100%;
+        }
+
+        #beauty>div:nth-child(2)>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            background-image: url(/assets/img/beauty.jpg);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            padding-top: 40px;
+            padding-right: 40px;
+            border-radius: 6px;
+            margin-top: 5px;
+            height: 170px;
+            padding-bottom: 250px;
+            margin-left: -10px;
+            width: 220px;
+        }
+
+        #beauty>div:nth-child(2)>div>span:first-child {
+            color: rgb(5, 98, 230);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        #beauty>div:nth-child(2)>div>span:last-of-type {
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+        #beauty>div:nth-child(2)>div>a {
+            text-decoration: none;
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #beauty>div:nth-child(2)>div>a::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(4, 30, 66);
+            width: 30px;
+            height: 1px;
+            top: 28px;
+            left: 1px;
+        }
+
+        #beauty ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            list-style: none;
+            gap: 30px;
+            width: 80%;
+        }
+
+        #beauty>div:nth-child(2)>a>img {
+            margin-top: 6px;
+            height: 900px;
+            object-fit: contain;
+        }
+
+        #beauty ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        #beauty ul li>a:nth-child(1)>img {
+            width: 100%;
+            height: 170px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+
+        #beauty ul li>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin-top: 35px;
+            width: 100%;
+        }
+
+        #beauty ul li>div a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #beauty ul li>div a:nth-child(1) {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            color: gray;
+        }
+
+        #beauty ul li>div a:nth-child(2) {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 28px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #beauty ul li>div span {
+            line-height: 26px;
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+
+
+
+        #clothing {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px 30px 30px 30px;
+            border-radius: 6px;
+            background-color: white;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 30px;
+        }
+
+        #clothing>div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.25px solid rgb(235, 235, 235);
+        }
+
+        #clothing>div:nth-child(1) h3 {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+            text-align: start;
+            margin-bottom: 14px;
+            margin-top: -2px;
+        }
+
+        #clothing>div:nth-child(1)>div {
+            margin-top: -20px;
+        }
+
+        #clothing>div:nth-child(1)>div a {
+            text-decoration: none;
+            padding-bottom: 5px;
+            margin-left: 14px;
+            margin-right: 14px;
+            color: rgb(85, 84, 84);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #clothing>div:nth-child(1)>div a:nth-child(4) {
+            margin-right: 18px;
+        }
+
+        #clothing>div:nth-child(1)>div a:nth-child(4)::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            top: 30px;
+            position: absolute;
+            background-color: black;
+        }
+
+        #clothing>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            list-style: none;
+            gap: 50px;
+            width: 100%;
+        }
+
+        #clothing>div:nth-child(2)>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: start;
+            background-image: url(/assets/img/clothing.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            object-fit: contain;
+            padding-top: 40px;
+            padding-right: 40px;
+            border-radius: 6px;
+            margin-top: 5px;
+            height: 170px;
+            padding-bottom: 250px;
+            margin-left: -10px;
+            width: 220px;
+        }
+
+        #clothing>div:nth-child(2)>div>span:first-child {
+            color: rgb(5, 98, 230);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        #clothing>div:nth-child(2)>div>span:last-of-type {
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+        }
+
+        #clothing>div:nth-child(2)>div>a {
+            text-decoration: none;
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #clothing>div:nth-child(2)>div>a::before {
+            content: "";
+            position: absolute;
+            background-color: rgb(4, 30, 66);
+            width: 30px;
+            height: 1px;
+            top: 28px;
+            left: 1px;
+        }
+
+        #clothing ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: start;
+            list-style: none;
+            gap: 30px;
+            width: 80%;
+        }
+
+        #clothing>div:nth-child(2)>a>img {
+            margin-top: 6px;
+            height: 900px;
+            object-fit: contain;
+        }
+
+        #clothing ul li {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        #clothing ul li>a:nth-child(1)>img {
+            width: 100%;
+            height: 170px;
+            border-radius: 15px;
+            text-decoration: none;
+        }
+
+        #clothing ul li>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin-top: 35px;
+            width: 100%;
+        }
+
+        #clothing ul li>div a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #clothing ul li>div a:nth-child(1) {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            color: gray;
+        }
+
+        #clothing ul li>div a:nth-child(2) {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 28px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #clothing ul li>div span {
+            line-height: 26px;
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+
+        #categories2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            padding-top: 20px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            padding: 30px 30px 30px 30px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        #categories2>div:nth-child(1) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            border-bottom: 1px solid rgb(235, 235, 235);
+            line-height: 1.7px;
+            height: 45px;
+        }
+
+        #categories2>div:nth-child(1) h3 {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+            text-align: start;
+            margin-top: -8px;
+        }
+
+        #categories2>div:nth-child(1) span {
+            font-family: iranyekan;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: start;
+        }
+
+        #categories2>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: end;
+            width: 100%;
+            margin-right: 30px;
+            margin-top: 55px;
+            margin-bottom: 20px;
+        }
+
+        #categories2>div:nth-child(2)>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 60px;
+
+        }
+
+        #categories2>div:nth-child(2)>div img {
+            width: 50%;
+
+        }
+
+        #categories2>div:nth-child(2)>div>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #categories2>div:nth-child(2)>div:last-child {
+            margin-right: -40px;
+        }
+
+        #categories2>div:nth-child(2)>div>div a {
+            font-family: iranyekan;
+            font-weight: 300;
+            font-size: 6px;
+            word-spacing: 3px;
+            text-decoration: none;
+        }
+
+        #categories2>div:nth-child(2)>div>div a:nth-child(1) {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 17px;
+        }
+
+        #categories2>div:nth-child(2)>div>div a:nth-child(1):hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #last {
+            width: calc(100% - 60px);
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: start;
+            padding-top: 40px;
+            background-color: white;
+            margin-bottom: 30px;
+            padding: 30px 30px 40px 30px;
+            border-radius: 6px;
+
+        }
+
+        #last>div:nth-child(1) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1.25px solid rgb(235, 235, 235);
+            margin-top: -40px;
+            margin-bottom: -21px;
+            height: 90px;
+        }
+
+        #last>div:nth-child(1) h3 {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+            text-align: start;
+
+        }
+
+        #last>div:nth-child(1)>div a {
+            text-decoration: none;
+            padding-bottom: 5px;
+            margin-left: 14px;
+            margin-right: 14px;
+            color: rgb(85, 84, 84);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            position: relative;
+        }
+
+        #last>div:nth-child(1)>div>a:nth-child(4) {
+            margin-right: 18px;
+        }
+
+        #last>div:nth-child(1)>div a:nth-child(4)::before {
+            content: "";
+            width: 100%;
+            height: 1px;
+            top: 30px;
+            position: absolute;
+            background-color: black;
+        }
+
+
+
+
+
+
+
+
+        #last>div:nth-child(2){
+            width: 100%;
+        }
+
+        #last>div:nth-child(2) ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            list-style: none;
+            margin-right: -40px;
+        }
+
+        #last>div:nth-child(2) ul li {
+            height: 310px;
+            width: 18%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            padding: 35px 20px 30px 20px;
+            border: 1.25px solid rgb(235, 235, 235);
+        }
+
+        #last>div:nth-child(2) ul li>a {
+            height: 50%;
+        }
+
+        #last>div:nth-child(2) ul li>a>img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+
+        #last>div:nth-child(2) ul li>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            width: 100%;
+            height: 20%;
+
+        }
+
+        #last>div:nth-child(2) ul li>div>a {
+            text-decoration: none;
+            color: black;
+
+        }
+
+        #last>div:nth-child(2) ul li>div>a:nth-child(1) {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 14px;
+            color: gray;
+        }
+
+        #last>div:nth-child(2) ul li>div>a:nth-child(1):hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        #last>div:nth-child(2) ul li>div>a:nth-child(2):hover {
+            color: rgb(76, 8, 140);
+            transition: 0.5s all;
+            text-decoration: underline;
+        }
+
+
+        #last>div:nth-child(2) ul li>div>a:nth-child(2) {
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 17px;
+            line-height: 28px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+
+        #last>div:nth-child(2) ul li>div span {
+            line-height: 26px;
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 12px;
+        }
+
+
+        #specification {
+            width: 100%;
+            background-color: rgb(242, 243, 243);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 220px;
+        }
+
+        #specification>div {
+            width: 100%;
+            background-color: rgb(242, 243, 243);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        #specification>div>div {
+            width: 65%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            gap: 15px;
+
+        }
+
+        #specification>div>div>div:nth-child(1) {
+            font-size: 28px;
+
+        }
+
+        #specification>div>div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+        }
+
+        #specification>div>div>div:nth-child(2) span:nth-child(1) {
+            margin-bottom: -8px;
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 10px;
+        }
+
+        #specification>div>div>div:nth-child(2) span:nth-child(2) {
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 10px;
+            color: rgb(98, 105, 116);
+        }
+
+        footer {
+            color: rgb(4, 30, 66);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer>div:nth-child(1) {
+            width: 100%;
+            padding-top: 20px;
+            border-top: 1.25px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 60px;
+            background-color: white;
+            height: 160px;
+        }
+
+        footer>div:nth-child(1) h4 {
+            font-size: 28px;
+            line-height: 40px;
+            text-align: center;
+            font-family: iranyekan;
+            font-weight: 600;
+            font-size: 28px;
+            color: rgb(4, 30, 66);
+        }
+
+        footer>div:nth-child(1)>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            gap: 10px;
+        }
+
+        footer>div:nth-child(1)>div input {
+            width: 330px;
+            height: 20px;
+            padding: 20px;
+            border: 1.25px solid lightgray;
+            border-radius: 8px;
+            color: rgb(4, 30, 66);
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 12px;
+        }
+
+        footer>div:nth-child(1)>div>div {
+            width: 120px;
+            height: 60px;
+            background-color: #f5c34b;
+            text-align: center;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        footer>div:nth-child(1)>div>div>a {
+            color: rgb(4, 30, 66);
+            text-decoration: none;
+            font-family: iranyekan;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        footer>div:nth-child(2) {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            font-family: iranyekan;
+            font-size: x-small;
+            gap: 10px;
+        }
+
+        footer>div:nth-child(2) a {
+            color: black;
+            text-decoration: none;
+        }
+
+        footer>div:nth-child(2) span {
+            font-family: "Morabba";
+            font-weight: 400;
+            width: 190px;
+            font-size: 18px;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(1) {
+            margin-right: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin-bottom: 40px;
+            margin-left: 35px;
+            width: 13%;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: start;
+            margin-bottom: 65px;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(2)>div {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 30px;
+            margin-bottom: 110px;
+            margin-right: -20px;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(1)>div {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: start;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(1) {
+            font-size: 50px;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            margin-top: 20px;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(2) span {
+            font-family: "iranyekan";
+            font-weight: 600;
+            font-size: 14px;
+            margin-right: 6px;
+            width: 80%;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(2)>span:nth-child(2) {
+            font-family: "iranyekan";
+            font-weight: 200;
+            font-size: 10px;
+            width: 70%;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(2)>div>div {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 14px;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(2)>div>div a {
+            font-family: "iranyekan";
+            font-weight: 500;
+            font-size: 14px;
+            color: rgb(3, 46, 106);
+        }
+
+        footer>div:nth-child(2)>div:nth-child(2)>div>div a:hover {
+            text-decoration: underline;
+            color: rgb(76, 8, 140);
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(2) span {
+            font-family: "Morabba";
+            font-weight: 400;
+            width: 190px;
+            font-size: 18px;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 20px;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: start;
+            gap: 15px;
+        }
+
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div i {
+            font-size: 21px;
+            display: flex;
+            flex-direction: row;
+            justify-self: center;
+            align-items: center;
+            color: rgb(4, 30, 66);
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div i:hover {
+            color: #f5c34b;
+            transition: 0.5s all;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            gap: 22px;
+
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div {
+            margin-right: 20px;
+            position: relative;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div::before {
+            content: "";
+            position: absolute;
+            background-color: gray;
+            width: 280px;
+            height: 25px;
+            opacity: 0.8;
+            display: none;
+            transition: 0.5ms all;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div:hover::before {
+            display: flex;
+        }
+
+        footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div>div i {
+            color: white;
+        }
+
+        footer>div:nth-child(3) {
+            display: none;
+        }
+
+        @media screen and (max-width: 1800px) {
+            nav>div:nth-child(1)>div:nth-child(1)>div input {
+                width: 400px;
+                height: 50px;
+            }
+        }
+
+        @media screen and (max-width: 1640px) {
+            #last>div:nth-child(2) ul li {
+                height: 330px;
+            }
+
+            #categories1>div:nth-child(2) ul li {
+                height: 330px;
+            }
+        }
+
+        @media screen and (max-width: 1500px) {
+            nav>div:nth-child(1)>div:nth-child(1)>div input {
+                width: 270px;
+                height: 50px;
+            }
+        }
+
+        @media screen and (max-width: 1400px) {
+
+            nav>div:nth-child(1)>div:nth-child(1)>div input {
+                width: 200px;
+                height: 50px;
+            }
+        }
+
+        @media screen and (max-width: 1300px) {
+
+            nav {
+                height: 175px;
+            }
+
+            nav>div:nth-child(1)>div:nth-child(1)>div input {
+                width: 160px;
+                height: 50px;
+            }
+
+        }
+
+        @media screen and (max-width: 1280px) {
+            #hero>div:nth-child(2)>div:last-child {
+                width: 28%;
+            }
+        }
+
+        @media screen and (max-width: 1260px) {
+
+            nav {
+                height: 224px;
+            }
+
+            nav>div:nth-child(1) {
+                height: 140px;
+            }
+
+            nav>div:nth-child(1)>div:nth-child(1)>div input {
+                width: 160px;
+                height: 50px;
+            }
+
+        }
+
+
+        @media screen and (max-width: 1200px) {
+
+            nav>div:nth-child(4) {
+                display: none;
+            }
+
+            nav>div:nth-child(2) {
+                display: none;
+            }
+
+            nav>div:nth-child(1) {
+                display: none;
+            }
+
+            nav {
+                height: 145px;
+            }
+
+            nav>div:nth-child(3) {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+            nav>div:nth-child(3)>div:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                width: 100%;
+                height: 90px;
+                border-bottom: 1px solid rgba(117, 120, 125, 0.5);
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(1)>div:nth-child(1) {
+                margin-right: 60px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 18px;
+                width: 116px;
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(1)>div:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                justify-content: center;
+                height: 50px;
+                margin-left: 45px;
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div a {
+                color: #f5c34b;
+                font-size: x-small;
+                margin-top: 6px;
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(4, 30, 66);
+                width: 50px;
+                height: 50px;
+                border-radius: 40px 0 0 40px;
+
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(1)>div:nth-child(2) select {
+                font-family: iranyekan;
+                font-weight: 400;
+                font-size: xx-small;
+                outline: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 150px;
+                height: 50px;
+                margin: 0;
+                border: none;
+                color: rgb(4, 30, 66);
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(1)>div:nth-child(2) input {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-right: 20px;
+                font-family: iranyekan;
+                font-weight: 400;
+                font-size: xx-small;
+                width: 550px;
+                height: 50px;
+                outline: none;
+                border: none;
+                margin: 0;
+                border-radius: 0 40px 40px 0;
+
+
+            }
+
+            nav>div:nth-child(3)>div:nth-child(1)>div:nth-child(2) input {
+                color: rgb(4, 30, 66);
+            }
+
+            nav>div:nth-child(3)>div:nth-child(2) {
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 17px;
+                margin-left: 70px;
+                margin-right: 80px;
+                margin-top: 10px;
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(2)>div:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(2)>div:nth-child(1) i {
+                font-size: large;
+                margin-right: 35px;
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(2)>div:nth-child(2) div {
+                margin-left: 40px;
+            }
+
+
+            nav>div:nth-child(3)>div:nth-child(2)>div:nth-child(2) {
+                gap: 65px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            #hero>div:nth-child(1) {
+                flex-direction: column;
+            }
+
+            #hero>div:nth-child(1)>div:first-child {
+                width: calc(100% - 100px);
+            }
+
+            #hero>div:nth-child(1)>div:last-child {
+                width: 100%;
+                flex-direction: row;
+            }
+
+            #hero>div:nth-child(1)>div:last-child>div {
+                width: 50%;
+                height: 280px;
+            }
+
+            #hero>div:nth-child(2) {
+                flex-wrap: wrap;
+                flex-direction: row;
+                margin-top: -280px;
+            }
+
+            #hero>div:nth-child(2)>div:first-child {
+                width: 100%;
+                flex-wrap: wrap;
+                flex-direction: row;
+                margin-top: -25px;
+            }
+
+            #hero>div:nth-child(2)>div:first-child>div {
+                width: calc(50% - 15px);
+            }
+
+            #hero>div:nth-child(2)>div:last-child {
+                margin-right: auto;
+                width: calc(50% - 15px);
+                align-self: flex-start;
+            }
+
+            #hero>div:nth-child(2)>div:last-child>div {
+                margin-right: 20px;
+            }
+
+
+            #categories1>div:nth-child(2) {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+
+            }
+
+            #digital>div:nth-child(2)>div {
+                margin-left: -80px;
+                width: 50%;
+                height: 200px;
+            }
+
+            #digital ul {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+                gap: 80px;
+                margin-right: 100px;
+            }
+
+            #digital ul li>a:nth-child(1)>img {
+                height: 140px;
+            }
+
+            #digital ul li {
+                width: 19%;
+            }
+
+            #digital ul li>div {
+                width: 150px;
+            }
+
+
+            #furniture>div:nth-child(2)>div {
+                margin-left: -80px;
+                width: 50%;
+                height: 200px;
+            }
+
+            #furniture ul {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+                gap: 80px;
+                margin-right: 100px;
+            }
+
+            #furniture ul li>a:nth-child(1)>img {
+                height: 140px;
+            }
+
+            #furniture ul li {
+                width: 19%;
+            }
+
+            #furniture ul li>div {
+                width: 150px;
+            }
+
+
+            #beauty>div:nth-child(2)>div {
+                margin-left: -80px;
+                width: 50%;
+                height: 200px;
+            }
+
+            #beauty ul {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+                gap: 80px;
+                margin-right: 100px;
+            }
+
+            #beauty ul li>a:nth-child(1)>img {
+                height: 140px;
+            }
+
+            #beauty ul li {
+                width: 19%;
+            }
+
+            #beauty ul li>div {
+                width: 150px;
+            }
+
+            #clothing>div:nth-child(2)>div {
+                margin-left: -80px;
+                width: 50%;
+                height: 200px;
+            }
+
+            #clothing ul {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+                gap: 80px;
+                margin-right: 100px;
+            }
+
+            #clothing ul li>a:nth-child(1)>img {
+                height: 140px;
+            }
+
+            #clothing ul li {
+                width: 19%;
+            }
+
+            #clothing ul li>div {
+                width: 150px;
+            }
+
+
+            #categories2>div:nth-child(2) {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+            }
+        }
+
+
+        @media screen and (max-width: 1000px) {
+
+            nav>div:nth-child(3) {
+                display: none;
+            }
+
+            nav {
+                height: 150px;
+            }
+
+            nav>div:nth-child(4) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                justify-content: center;
+                height: 50px;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(2) a {
+                color: #f5c34b;
+                font-size: x-small;
+                margin-top: 6px;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(2)>div:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(4, 30, 66);
+                width: 50px;
+                height: 50px;
+                border-radius: 0 8px 8px 0;
+
+            }
+
+            nav>div:nth-child(4)>div:nth-child(2) input {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-right: 700px;
+                font-family: iranyekan;
+                font-weight: 400;
+                font-size: xx-small;
+                width: 860px;
+                height: 50px;
+                outline: none;
+                border: none;
+                margin: 0;
+                border-radius: 8px 0 0 8px;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(2) input {
+                color: rgb(4, 30, 66);
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 10px;
+                margin-bottom: 20px;
+                position: relative;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2) {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 8px;
+                margin-left: 40px;
+                gap: 30px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:hover {
+                background-color: rgb(4, 30, 66);
+                transition: 0.5s all;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:hover a {
+                color: #f5c34b;
+                transition: 0.5s all;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(3) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 10px;
+                height: 50px;
+                width: 50px;
+                font-size: x-small;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 10px;
+                height: 50px;
+                width: 50px;
+                font-size: x-small;
+
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1) {
+                position: absolute;
+                top: -9px;
+                left: 168px;
+                border: 1px solid black;
+                border-radius: 50%;
+                height: 13px;
+                width: 13px;
+                font-size: 3px;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1) a {
+                position: absolute;
+                bottom: -8px;
+                left: 2px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: end;
+
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(1) {
+                margin-right: 50px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                gap: 6px;
+                margin-left: 620px;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(1)>a:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 18px;
+                width: 116px;
+            }
+
+            #bestseller>div:nth-child(1) {
+                border-bottom: none;
+                height: 150px;
+
+            }
+
+            #bestseller>div:nth-child(2) ul li {
+                height: 330px;
+            }
+
+            #bestseller>div:nth-child(1) h3 {
+                margin-top: -70px;
+                margin-bottom: -35px;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: start;
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                padding-bottom: 16px;
+                width: 50%;
+            }
+
+            #bestseller>div:nth-child(1)>div {
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                align-items: end;
+                margin-top: 80px;
+                border-top: 1.25px solid rgb(235, 235, 235);
+                padding-bottom: 9px;
+                padding-top: 10px;
+                width: 50%;
+            }
+
+            #digital>div:nth-child(1) {
+                height: 170px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+            }
+
+
+            #digital>div:nth-child(1) h3 {
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                width: 100%;
+                margin-top: 10px;
+                padding-bottom: 30px;
+            }
+
+            #digital>div:nth-child(1)>div {
+                margin-bottom: 30px;
+            }
+
+            #digital>div:nth-child(2)>div {
+                padding-top: 100px;
+                width: 400px;
+                height: 600px;
+                margin-left: 50px;
+                margin-left: -160px;
+            }
+
+            #digital ul {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+                gap: 80px;
+                margin-top: 70px;
+
+            }
+
+            #digital ul li>a:nth-child(1)>img {
+
+                width: 100px;
+                height: 140px;
+            }
+
+            #digital ul li {
+                width: 19%;
+            }
+
+            #digital ul li>div {
+                width: 150px;
+            }
+
+            #furniture>div:nth-child(1) {
+                height: 170px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+            }
+
+
+            #furniture>div:nth-child(1) h3 {
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                width: 100%;
+                margin-top: 10px;
+                padding-bottom: 30px;
+            }
+
+            #furniture>div:nth-child(1)>div {
+                margin-bottom: 30px;
+            }
+
+            #furniture>div:nth-child(2)>div {
+                padding-top: 100px;
+                width: 400px;
+                height: 600px;
+                margin-left: 50px;
+                margin-left: -160px;
+            }
+
+            #furniture ul {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+                gap: 80px;
+                margin-top: 70px;
+
+            }
+
+            #furniture ul li>a:nth-child(1)>img {
+
+                object-fit: contain;
+                width: 100px;
+                height: 140px;
+            }
+
+            #furniture ul li {
+                width: 19%;
+            }
+
+            #furniture ul li>div {
+                width: 150px;
+            }
+
+            #beauty>div:nth-child(1) {
+                height: 170px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+            }
+
+
+            #beauty>div:nth-child(1) h3 {
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                width: 100%;
+                margin-top: 10px;
+                padding-bottom: 30px;
+            }
+
+            #beauty>div:nth-child(1)>div {
+                margin-bottom: 30px;
+            }
+
+            #beauty>div:nth-child(2)>div {
+                padding-top: 100px;
+                width: 400px;
+                height: 600px;
+                margin-left: 50px;
+                margin-left: -160px;
+                background-position: left;
+            }
+
+            #beauty ul {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+                gap: 80px;
+                margin-top: 70px;
+
+            }
+
+            #beauty ul li>a:nth-child(1)>img {
+
+                object-fit: contain;
+                width: 100px;
+                height: 140px;
+            }
+
+            #beauty ul li {
+                width: 19%;
+            }
+
+            #beauty ul li>div {
+                width: 150px;
+            }
+
+            #clothing>div:nth-child(1) {
+                height: 170px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+            }
+
+
+            #clothing>div:nth-child(1) h3 {
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                width: 100%;
+                margin-top: 10px;
+                padding-bottom: 30px;
+            }
+
+            #clothing>div:nth-child(1)>div {
+                margin-bottom: 30px;
+            }
+
+            #clothing>div:nth-child(2)>div {
+                padding-top: 100px;
+                width: 400px;
+                height: 600px;
+                margin-left: 50px;
+                margin-left: -160px;
+            }
+
+            #clothing ul {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+                gap: 80px;
+                margin-top: 70px;
+
+            }
+
+            #clothing ul li>a:nth-child(1)>img {
+
+                object-fit: contain;
+                width: 100px;
+                height: 140px;
+            }
+
+            #clothing ul li {
+                width: 19%;
+            }
+
+            #clothing ul li>div {
+                width: 150px;
+            }
+
+            #categories2>div:nth-child(2) {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: start;
+
+            }
+
+            #last>div:nth-child(1) {
+                border-bottom: none;
+                height: 150px;
+
+            }
+
+            #last>div:nth-child(2) ul li {
+                height: 330px;
+            }
+
+            #last>div:nth-child(1) h3 {
+                margin-top: -70px;
+                margin-bottom: -35px;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: start;
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                padding-bottom: 16px;
+                width: 50%;
+            }
+
+            #last>div:nth-child(1)>div {
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                align-items: end;
+                margin-top: 80px;
+                border-top: 1.25px solid rgb(235, 235, 235);
+                padding-bottom: 9px;
+                padding-top: 10px;
+                width: 50%;
+            }
+
+
+            #specification {
+                flex-wrap: wrap;
+                display: flex;
+                flex-direction: row;
+                height: 350px;
+            }
+
+            #specification>div:first-child {
+                margin-bottom: 30px;
+            }
+
+            footer>div:nth-child(1) {
+                display: none;
+            }
+
+            footer>div:nth-child(2) {
+                display: none;
+            }
+
+            footer>div:nth-child(3) a {
+                color: black;
+                text-decoration: none;
+            }
+
+            footer>div:nth-child(3) span {
+                font-family: "Morabba";
+                font-weight: 400;
+                width: 190px;
+                font-size: 18px;
+                color: rgb(4, 30, 66);
+            }
+
+            footer>div:nth-child(3) {
+                color: rgb(4, 30, 66);
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                height: 735px;
+                background-color: white;
+                border-top: 1.25px solid rgb(229, 226, 226);
+                width: 100%;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1) {
+                width: 50%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                margin-right: 40px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2) {
+                width: 50%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(1) {
+                margin-top: -210px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 80px;
+
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(1) h4 {
+                font-size: 28px;
+                line-height: 40px;
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 28px;
+                color: rgb(4, 30, 66);
+                margin-bottom: 30px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                gap: 10px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div input {
+                width: 260px;
+                height: 15px;
+                padding: 20px;
+                border: 1.25px solid lightgray;
+                border-radius: 8px;
+                color: rgb(4, 30, 66);
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 12px;
+                margin-right: -50px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div>div {
+                width: 110px;
+                height: 56px;
+                background-color: #f5c34b;
+                text-align: center;
+                border-radius: 6px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(1)>div>div>a {
+                color: rgb(4, 30, 66);
+                text-decoration: none;
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 16px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                margin-top: 30px;
+                margin-bottom: 25px;
+                gap: 14px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div>a {
+                font-family: "iranyekan";
+                font-weight: 500;
+                font-size: 14px;
+                color: rgb(3, 46, 106);
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(2)>div a:hover {
+                text-decoration: underline;
+                color: rgb(76, 8, 140);
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(3)>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                margin-top: 30px;
+                gap: 14px;
+                margin-bottom: -210px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(3)>div>a {
+                font-family: "iranyekan";
+                font-weight: 500;
+                font-size: 14px;
+                color: rgb(3, 46, 106);
+            }
+
+            footer>div:nth-child(3)>div:nth-child(1)>div:nth-child(3)>div a:hover {
+                text-decoration: underline;
+                color: rgb(76, 8, 140);
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(2)>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                margin-top: 30px;
+                gap: 14px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(2)>div>a {
+                font-family: "iranyekan";
+                font-weight: 500;
+                font-size: 14px;
+                color: rgb(3, 46, 106);
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(2)>div a:hover {
+                text-decoration: underline;
+                color: rgb(76, 8, 140);
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(1) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                margin-top: 30px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div {
+
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: start;
+                margin-right: 20px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(1)>span {
+                margin-bottom: 30px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(1) {
+                font-size: 75px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(2) span {
+                font-family: "iranyekan";
+                font-weight: 600;
+                font-size: 14px;
+                margin-right: 6px;
+                width: 100%;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(2)>span:nth-child(2) {
+                font-family: "iranyekan";
+                font-weight: 200;
+                font-size: 10px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3)>div:nth-child(2) span {
+                font-family: "Morabba";
+                font-weight: 400;
+                width: 190px;
+                font-size: 18px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3)>div:nth-child(1) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 20px;
+                margin-top: 30px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: start;
+                gap: 15px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div i {
+                font-size: 21px;
+                display: flex;
+                flex-direction: row;
+                justify-self: center;
+                align-items: center;
+                color: rgb(4, 30, 66);
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div i:hover {
+                color: #f5c34b;
+                transition: 0.5s all;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3)>div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: start;
+                gap: 22px;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div {
+                margin-right: 80px;
+                position: relative;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div::before {
+                content: "";
+                position: absolute;
+                background-color: gray;
+                width: 280px;
+                height: 25px;
+                opacity: 0.8;
+                display: none;
+                transition: 0.5ms all;
+            }
+
+            footer>div:nth-child(3)>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div:hover::before {
+                display: flex;
+            }
+
+
+
+
+        }
+
+        @media screen and (max-width: 576px) {
+            main {
+                margin: 20px;
+
+            }
+
+            nav>div:nth-child(1) {
+                display: none;
+            }
+
+            nav>div:nth-child(2) {
+                display: none;
+            }
+
+            nav>div:nth-child(3) {
+                display: none;
+            }
+
+            nav {
+                height: 168px;
+                width: 100%;
+            }
+
+            nav>div:nth-child(4) {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+                text-align: center;
+                justify-content: center;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(2) a {
+                color: #f5c34b;
+                font-size: 25px;
+                margin-top: 6px;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(2)>div:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                background-color: rgb(4, 30, 66);
+                width: 60px;
+                height: 60px;
+                border-radius: 0 8px 8px 0;
+
+            }
+
+            nav>div:nth-child(4)>div:nth-child(2) input {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-family: iranyekan;
+                font-weight: 400;
+                font-size: xx-small;
+                width: 400px;
+                height: 60px;
+                outline: none;
+                border: none;
+                margin: 0;
+                padding-right: 230px;
+                border-radius: 8px 0 0 8px;
+                color: rgb(4, 30, 66);
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1) {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                position: relative;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 8px;
+                gap: 22px;
+                display: flex;
+                flex-direction: row;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:hover {
+                background-color: rgb(4, 30, 66);
+                transition: 0.5s all;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:hover a {
+                color: #f5c34b;
+                transition: 0.5s all;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(3) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 10px;
+                height: 50px;
+                width: 50px;
+                font-size: x-small;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid black;
+                border-radius: 10px;
+                height: 50px;
+                width: 50px;
+                font-size: x-small;
+
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1) {
+                position: absolute;
+                top: -7px;
+                left: 115px;
+                border: 1px solid black;
+                border-radius: 50%;
+                height: 16px;
+                width: 16px;
+                font-size: 3px;
+                background-color: #f5c34b;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(2)>div:nth-child(1) a {
+                position: absolute;
+                bottom: -7px;
+                left: 3px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: end;
+
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(1) {
+                margin-right: 10px;
+                margin-left: 158px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-size: 30px;
+                gap: 2px;
+            }
+
+            nav>div:nth-child(4)>div:nth-child(1)>div:nth-child(1)>a:nth-child(2) {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 19px;
+                width: 130px;
+            }
+
+            #hero {
+                padding-top: 35px;
+                width: 450px;
+            }
+
+            #hero>div:nth-child(1) {
+                flex-direction: column;
+            }
+
+            #hero>div:nth-child(1)>div:first-child {
+                width: calc(100% - 115px);
+                height: 550px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+
+            #hero>div:nth-child(1)>div:first-child>a>img {
+                width: 200px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: -20px;
+                margin-right: -70px;
+            }
+
+            #hero>div:nth-child(1)>div:first-child>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                margin-right: -50px;
+                /* margin-left: 50px; */
+
+            }
+
+            #hero>div:nth-child(1)>div:first-child>div button {
+                width: 210px;
+                height: 60px;
+                border-radius: 6px;
+                /* margin-bottom: 260px; */
+            }
+
+            #hero>div:nth-child(1)>div:first-child>div button a {
+                text-decoration: none;
+                color: rgb(4, 30, 66);
+                line-height: 50px;
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            #hero>div:nth-child(1)>div:first-child>div button a:hover {
+                text-decoration: none;
+                color: rgb(87, 107, 136);
+                line-height: 50px;
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 15px;
+            }
+
+            #hero>div:nth-child(1)>div:first-child>div a {
+                width: 100%;
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 44px;
+                text-align: center;
+            }
+
+            #hero>div:nth-child(1)>div:last-child {
+                width: 100%;
+                padding-right: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin-top: 40px;
+                gap: 35px;
+                margin-bottom: 35px;
+            }
+
+            #hero>div:nth-child(1)>div:last-child>div {
+                width: calc(100% - 15px);
+                height: 100%;
+                gap: 10px;
+                padding-top: 58px;
+                padding-bottom: 58px;
+                margin-right: -55px;
+            }
+
+            #hero>div:nth-child(1)>div:last-child>div>div {
+                text-align: center;
+            }
+
+            #hero>div:nth-child(1)>div:last-child>div>div>a:last-child {
+                color: rgb(4, 30, 66);
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            #hero>div:nth-child(1)>div:last-child>div>div>a:first-of-type {
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 28px;
+                color: rgb(4, 30, 66);
+            }
+
+
+            #hero>div:nth-child(1)>div:last-child>div>a>img {
+                width: 190px;
+            }
+
+            #hero>div:nth-child(1)>div:last-child>div>div span {
+                color: rgb(68, 50, 151);
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 17px;
+            }
+
+            #hero>div:nth-child(2) {
+                flex-wrap: wrap;
+                flex-direction: column;
+                margin-top: 30px;
+            }
+
+            #hero>div:nth-child(2)>div:first-child {
+                width: calc(100% + 5px);
+                height: 100%;
+                flex-wrap: wrap;
+                gap: 35px;
+                flex-direction: column;
+                /* margin-top: -25px; */
+            }
+
+            #hero>div:nth-child(2)>div:first-child>div {
+                width: calc(100% - 20px);
+                padding-top: 68px;
+                padding-bottom: 68px;
+            }
+
+            #hero>div:nth-child(2)>div:first-child>div>div {
+                text-align: center;
+                margin-right: -20px;
+            }
+
+            #hero>div:nth-child(2)>div:first-child>div>div span {
+                color: rgb(68, 50, 151);
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 17px;
+            }
+
+            #hero>div:nth-child(2)>div:first-child>div>div>a:last-child {
+                color: rgb(4, 30, 66);
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            #hero>div:nth-child(2)>div:first-child>div>div>a:first-of-type {
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 28px;
+                color: rgb(4, 30, 66);
+            }
+
+            #hero>div:nth-child(2)>div:first-child>div>img {
+                width: 190px;
+            }
+
+            #hero>div:nth-child(2)>div:last-child {
+                margin-right: -1px;
+                width: calc(100% - 15px);
+                padding-top: 18px;
+                padding-bottom: 18px;
+            }
+
+            #hero>div:nth-child(2)>div:last-child>img {
+                width: 190px;
+                margin-right: 20px;
+            }
+
+            #categories1>div:nth-child(1) h3 {
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 26px;
+                text-align: start;
+                margin-top: -10px;
+            }
+
+            #categories1>div:nth-child(1) span {
+                font-family: iranyekan;
+                font-weight: 400;
+                font-size: 12px;
+                text-align: start;
+                margin-top: 12px;
+            }
+
+            #categories1>div:nth-child(2) {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 50px;
+                margin-bottom: 25px;
+            }
+
+            #hero>div:nth-child(2)>div:last-child>div {
+                text-align: center;
+                margin-right: -16px;
+            }
+
+            #hero>div:nth-child(2)>div:last-child>div span {
+                color: rgb(68, 50, 151);
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 17px;
+            }
+
+            #hero>div:nth-child(2)>div:last-child>div>a:last-child {
+                color: rgb(4, 30, 66);
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 18px;
+            }
+
+            #hero>div:nth-child(2)>div:last-child>div>a:first-of-type {
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 28px;
+                color: rgb(4, 30, 66);
+            }
+
+            #categories1>div:nth-child(2)>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                width: 33%;
+                margin-bottom: 58px;
+            }
+
+            #categories1>div:nth-child(2)>div:nth-child(8)>img {
+                height: 60px;
+                width: 30px;
+            }
+
+            #categories1>div:nth-child(2)>div>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #categories1>div:nth-child(2)>div:last-child {
+                margin-bottom: 1px;
+            }
+
+
+            #bestseller>div:nth-child(1) {
+                border-bottom: none;
+                height: 150px;
+            }
+
+            #bestseller>div:nth-child(2) ul li {
+                height: 300px;
+            }
+
+            #bestseller>div:nth-child(2) ul li {
+                display: none;
+            }
+
+            #bestseller>div:nth-child(2) ul li:nth-child(2) {
+                display: flex;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            #bestseller>div:nth-child(1) {
+                flex-direction: column;
+                height: 220px;
+            }
+
+            #bestseller>div:nth-child(1) h3 {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: start;
+                border-bottom: 1.25px solid rgb(255, 255, 255);
+                width: 100%;
+                color: rgb(4, 30, 66);
+                padding: 0;
+            }
+
+            #bestseller>div:nth-child(1)>div {
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                align-items: end;
+                margin-top: 50px;
+                border-top: 1.25px solid rgb(235, 235, 235);
+                padding-bottom: 80px;
+                padding-top: 30px;
+                width: 100%;
+            }
+
+
+            #digital>div:nth-child(1) {
+                height: 170px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+                border-bottom: 1.25px solid #ffffff;
+            }
+
+            #digital>div:nth-child(1) h3 {
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                width: 100%;
+                margin-top: 1px;
+                padding-bottom: 18px;
+            }
+
+            #digital>div:nth-child(1)>div {
+                margin-top: 36px;
+            }
+
+            #digital>div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                /* margin-right: 5px; */
+            }
+
+            #digital>div:nth-child(2)>div {
+                padding-top: 260px;
+                width: 338px;
+                height: 100px;
+                /* margin-left: 50px;
+                margin-left: -160px; */
+                margin-top: 46px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            #digital>div:nth-child(2)>div>a::before {
+                height: 2.5px;
+            }
+
+            #digital ul {
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 80px;
+                margin-top: 70px;
+                width: 100%;
+                margin-right: -50px;
+
+            }
+
+            #digital ul li>a:nth-child(1)>img {
+                width: 250px;
+                height: 250px;
+                margin-bottom: -20px;
+            }
+
+            #digital ul li:last-child {
+                margin-bottom: 120px;
+            }
+
+            #digital ul li {
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #digital ul li>div:first-of-type {
+                width: 200px;
+            }
+
+            #digital ul li>div:last-of-type {
+                display: none;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: flex-start;
+                position: absolute;
+                top: 10px;
+                gap: 55px;
+            }
+
+            #digital ul li>div:last-of-type>div:first-child {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: start;
+                gap: 320px;
+                margin-right: -110px;
+            }
+
+            #digital ul li>div:last-of-type>div:first-child>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                gap: 10px;
+            }
+
+            #digital ul li>div:last-of-type>div:first-child>div>a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                width: 36px;
+                height: 36px;
+                border-radius: 50%;
+            }
+
+            #digital ul li>div:last-of-type>div:first-child>div>a>i {
+                font-size: 10px;
+            }
+
+            #digital ul li>div:last-of-type>div:first-child>a {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                background-color: white;
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                font-size: 10px;
+                color: #2828f7;
+            }
+
+            #digital ul li>div:last-of-type>div:last-child {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6px;
+                margin-right: 18px;
+                background-color: #f5c34b;
+                height: 50px;
+                width: 380px;
+                margin-right: -110px;
+            }
+
+            #digital ul li>div:last-of-type>div:last-child>a {
+                color: rgb(4, 30, 66);
+                font-family: iranyekan;
+                font-weight: 500;
+                font-size: 2px;
+                text-align: center;
+            }
+
+            #digital ul li:hover div:last-of-type {
+                display: flex;
+            }
+
+
+
+
+
+            #furniture>div:nth-child(1) {
+                height: 170px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+                border-bottom: 1.25px solid #ffffff;
+            }
+
+            #furniture>div:nth-child(1) h3 {
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                width: 100%;
+                margin-top: 1px;
+                padding-bottom: 18px;
+            }
+
+            #furniture>div:nth-child(1)>div {
+                margin-top: 36px;
+            }
+
+            #furniture>div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                /* margin-right: 5px; */
+            }
+
+            #furniture>div:nth-child(2)>div {
+                padding-top: 260px;
+                width: 338px;
+                height: 100px;
+                /* margin-left: 50px;
+                margin-left: -160px; */
+                margin-top: 46px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            #furniture>div:nth-child(2)>div>a::before {
+                height: 2.5px;
+            }
+
+            #furniture ul {
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 80px;
+                margin-top: 70px;
+                width: 100%;
+                margin-right: -50px;
+
+            }
+
+            #furniture ul li>a:nth-child(1)>img {
+                width: 250px;
+                height: 250px;
+                margin-bottom: -20px;
+            }
+
+            #furniture ul li:last-child {
+                margin-bottom: 120px;
+            }
+
+            #furniture ul li {
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #furniture ul li>div:first-of-type {
+                width: 200px;
+            }
+
+
+
+
+            #beauty>div:nth-child(1) {
+                height: 170px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+                border-bottom: 1.25px solid #ffffff;
+            }
+
+            #beauty>div:nth-child(1) h3 {
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                width: 100%;
+                margin-top: 1px;
+                padding-bottom: 18px;
+            }
+
+            #beauty>div:nth-child(1)>div {
+                margin-top: 36px;
+            }
+
+            #beauty>div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                /* margin-right: 5px; */
+            }
+
+            #beauty>div:nth-child(2)>div {
+                padding-top: 260px;
+                width: 338px;
+                height: 100px;
+                /* margin-left: 50px;
+                margin-left: -160px; */
+                margin-top: 46px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            #beauty>div:nth-child(2)>div>a::before {
+                height: 2.5px;
+            }
+
+            #beauty ul {
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 80px;
+                margin-top: 70px;
+                width: 100%;
+                margin-right: -50px;
+
+            }
+
+            #beauty ul li>a:nth-child(1)>img {
+                width: 250px;
+                height: 250px;
+                margin-bottom: -20px;
+            }
+
+            #beauty ul li:last-child {
+                margin-bottom: 120px;
+            }
+
+            #beauty ul li {
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #beauty ul li>div:first-of-type {
+                width: 200px;
+            }
+
+
+            #clothing>div:nth-child(1) {
+                height: 170px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                width: 100%;
+                border-bottom: 1.25px solid #ffffff;
+            }
+
+            #clothing>div:nth-child(1) h3 {
+                border-bottom: 1.25px solid rgb(235, 235, 235);
+                width: 100%;
+                margin-top: 1px;
+                padding-bottom: 18px;
+            }
+
+            #clothing>div:nth-child(1)>div {
+                margin-top: 36px;
+            }
+
+            #clothing>div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                /* margin-right: 5px; */
+            }
+
+            #clothing>div:nth-child(2)>div {
+                padding-top: 260px;
+                width: 338px;
+                height: 100px;
+                /* margin-left: 50px;
+                margin-left: -160px; */
+                margin-top: 46px;
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+
+            }
+
+            #clothing>div:nth-child(2)>div>a::before {
+                height: 2.5px;
+            }
+
+            #clothing ul {
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+                gap: 80px;
+                margin-top: 70px;
+                width: 100%;
+                margin-right: -50px;
+
+            }
+
+            #clothing ul li>a:nth-child(1)>img {
+                width: 250px;
+                height: 250px;
+                margin-bottom: -20px;
+            }
+
+            #clothing ul li:last-child {
+                margin-bottom: 120px;
+            }
+
+            #clothing ul li {
+                width: 100%;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #clothing ul li>div:first-of-type {
+                width: 200px;
+            }
+
+
+
+
+
+
+
+            #categories2>div:nth-child(1) h3 {
+                font-family: iranyekan;
+                font-weight: 600;
+                font-size: 26px;
+                text-align: start;
+                margin-top: -10px;
+            }
+
+            #categories2>div:nth-child(1) span {
+                font-family: iranyekan;
+                font-weight: 400;
+                font-size: 12px;
+                text-align: start;
+                margin-top: 12px;
+            }
+
+            #categories2>div:nth-child(2) {
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                margin-top: 50px;
+                margin-bottom: 25px;
+
+            }
+
+            #categories2>div:nth-child(2)>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 25px;
+                width: 28%;
+                margin-bottom: 58px;
+            }
+
+            #categories2>div:nth-child(2)>div>div {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #categories2>div:nth-child(2)>div:last-child {
+                margin-bottom: 1px;
+            }
+
+            #last>div:nth-child(1) {
+                border-bottom: none;
+                height: 150px;
+            }
+
+            #last>div:nth-child(2) ul li {
+                height: 300px;
+            }
+
+            #last>div:nth-child(2) ul li {
+                display: none;
+            }
+
+            #last>div:nth-child(2) ul li:nth-child(2) {
+                display: flex;
+                width: 100%;
+                margin-bottom: 50px;
+            }
+
+            #last>div:nth-child(1) {
+                flex-direction: column;
+                height: 220px;
+            }
+
+            #last>div:nth-child(1) h3 {
+                margin-top: 30px;
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: start;
+                border-bottom: 1.25px solid rgb(255, 255, 255);
+                width: 100%;
+                color: rgb(4, 30, 66);
+                padding: 0;
+            }
+
+            #last>div:nth-child(1)>div {
+                display: flex;
+                flex-direction: row;
+                justify-content: end;
+                align-items: end;
+                margin-top: 50px;
+                border-top: 1.25px solid rgb(235, 235, 235);
+                padding-bottom: 80px;
+                padding-top: 30px;
+                width: 100%;
+            }
+
+            #specification {
+                flex-wrap: nowrap;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                height: 550px;
+                margin-top: 60px;
+                margin-bottom: 100px;
+                margin-bottom: 90px;
+            }
+
+            #specification>div:first-child {
+                margin-bottom: 30px;
+            }
+
+            #specification>div {
+                flex-direction: column;
+                gap: 50px;
+            }
+
+            footer>div:nth-child(3) {
+                display: none;
+            }
+
+            footer>div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                align-items: flex-start;
+                padding-right: 30px;
+            }
+
+            footer>div:nth-child(1) h4 {
+                /* font-family: morabba; */
+                margin-top: 60px;
+                margin-bottom: 30px;
+                font-size: 32px;
+            }
+
+            footer>div:nth-child(1) {
+                display: flex;
+                padding-bottom: 70px;
+            }
+
+            footer>div:nth-child(1)>div {
+
+                flex-direction: row;
+            }
+
+            footer>div:nth-child(1)>div input {
+                width: 250px;
+                height: 20px;
+            }
+
+            footer>div:nth-child(2) {
+                margin-right: 30px;
+                width: calc(100% - 30px);
+                margin-right: auto;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(1)>span {
+                font-size: 19px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(1)>div {
+                margin-top: 10px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(1)>div>div {
+                margin-bottom: -50px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(1) {
+                font-size: 75px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(1)>div>div:nth-child(2) span {
+                width: 250px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(2)>div>span {
+                font-size: 19px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(2) {
+                display: flex;
+                flex-direction: column;
+                gap: 32px;
+                margin-top: -25px;
+                margin-bottom: 20px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(3)>div>span {
+                font-size: 20px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(1)>div>div i {
+                font-size: 24px;
+
+            }
+
+            footer>div:nth-child(2)>div:nth-child(3) {
+                margin-right: 5px;
+                gap: 45px;
+                margin-bottom: 30px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>div {
+                margin-right: 70px;
+            }
+
+            footer>div:nth-child(2)>div:nth-child(3)>div:nth-child(2)>span {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div>
+            <div>
+                <a href="#">زئومارت فارسی</a>
+
+                <div>
+                    <input type="search" value="جستجوی محصولات...">
+
+                    <select>
+                        <optgroup>
+                            <option selected>دسته بندی</option>
+                            <option>تجهیزات خودرو</option>
+                            <option>ساعت هوشمند</option>
+                            <option>کالای دیجیتال</option>
+                            <option>موبیال</option>
+                            <option>هدفون</option>
+                            <option>کالای سوپر مارکت</option>
+                            <option>صبحانه</option>
+                            <option>میوه</option>
+                            <option>لوازم منزل</option>
+                        </optgroup>
+                    </select>
+
+
+                    <div><a href="#"><i class='bx bx-search'></i></a></div>
+                </div>
+
+            </div>
+
+            <div>
+
+                <div>
+                    <span>تماس 09173115626</span>
+                    <div><i class='bx bxs-phone'></i></div>
+                </div>
+
+                <div>
+                    <a href="#">علاقه مندی ها آیتم های من</a>
+                    <div><a href="#"><i class='bx bx-heart'></i></a></div>
+                </div>
+
+                <div>
+                    <a href="#">ورود اکانت</a>
+                    <div><a href="#"><i class='bx bx-user'></i></a></div>
+                </div>
+
+                <div>
+                    <a href="#">0تومان مجموع</a>
+                    <div><a href="#">0</a></div>
+                    <div>
+                        <a href="#"><i class='bx bxs-cart-alt'></i></a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <div>
+            <div>
+
+                <div><i class='bx bx-menu-alt-right'></i><a href="#">دسته بندی ها</a>
+                    <ul>
+                        <li><i class='bx bxl-sketch'></i><a href="#">حراجی های امروز</a><i
+                                class='bx bx-chevron-left'></i></li>
+                        <li><a href="#">موبایل</a></li>
+                        <li><a href="#">لب تاب و کامپیوتر</a></li>
+                        <li><a href="#">لوازم اداری</a></li>
+                        <li><a href="#">آشپزخونه</a></li>
+                        <li><a href="#">کودک</a></li>
+                        <li><a href="#">بهداشتی آرایشی</a></li>
+                        <li><a href="#">کتاب و لوازم تحریر</a></li>
+                        <li><a href="#">لوازم منزل</a></li>
+                        <li><a href="#">سوپر مارکت</a></li>
+                    </ul>
+                </div>
+
+
+
+                <ul>
+                    <li><a href="#">خانه</a><i class='bx bx-chevron-down'></i>
+                        <ul>
+                            <li><a href="#">فروشگاه 1</a></li>
+                            <li><a href="#">فروشگاه 2</a></li>
+                            <li><a href="#">فروشگاه 3</a></li>
+                            <li><a href="#">فروشگاه 4</a></li>
+                            <li><a href="#">فروشگاه 5</a></li>
+                            <li><a href="#">فروشگاه 6</a></li>
+                            <li><a href="#">فروشگاه 7</a></li>
+                        </ul>
+                    </li>
+
+
+
+                    <li><a href="#">فروشگاه</a><i class='bx bx-chevron-down'></i>
+                        <div>
+                            <div><a href="#">چیدمان فروشگاه</a>
+                                <ul>
+                                    <li><a href="#">لیست فروشگاه 1</a></li>
+                                    <li><a href="#">لیست فروشگاه 2</a></li>
+                                    <li><a href="#">لیست فروشگاه 3</a></li>
+                                    <li><a href="#">لیست فروشگاه 4</a></li>
+                                </ul>
+                            </div>
+
+                            <div><a href="#">چیدمان محصول</a>
+                                <ul>
+                                    <li><a href="#">چیدمان 1</a></li>
+                                    <li><a href="#">چیدمان 2</a></li>
+                                    <li><a href="#">چیدمان 3</a></li>
+                                    <li><a href="#">چیدمان 4</a></li>
+                                    <li><a href="#">چیدمان 5</a></li>
+                                </ul>
+                            </div>
+
+                            <div><a href="#">نوع محصول </a>
+                                <ul>
+                                    <li><a href="#">ساده</a></li>
+                                    <li><a href="#">متغیر رنگ</a></li>
+                                    <li><a href="#">متغیر دکمه</a></li>
+                                    <li><a href="#">شمارنده</a></li>
+                                </ul>
+                            </div>
+
+                            <div><a href="#">صفحات ووکامرس</a>
+                                <ul>
+                                    <li><a href="#">سبد خرید</a></li>
+                                    <li><a href="#">تسویه حساب</a></li>
+                                    <li><a href="#">علاقه مندی ها</a></li>
+                                    <li><a href="#">اکانت</a></li>
+                                    <li><a href="#">مقایسه</a></li>
+                                    <li><a href="#">رهگیری محصول</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                    <li><a href="#">صفحات</a><i class='bx bx-chevron-down'></i>
+                        <div>
+                            <div><a href="#">صفحات پایه</a>
+                                <ul>
+                                    <li><a href="#">درباره ما</a></li>
+                                    <li><a href="#">تماس با ما</a></li>
+                                    <li><a href="#">ثبت نام</a></li>
+                                    <li><a href="#">404</a></li>
+                                </ul>
+                            </div>
+                            <div><a href="#">صفحات پایه</a>
+                                <ul>
+                                    <li><a href="#">شرایط و ضوابط</a></li>
+                                    <li><a href="#">سوالات منداول</a></li>
+                                    <li><a href="#"> راهنمایی</a></li>
+                                    <li><a href="#">بزودی</a></li>
+                                </ul>
+                            </div>
+                            <div><a href="#">داشبورد</a>
+                                <ul>
+                                    <li><a href="#">جزئیات اکانت</a></li>
+                                    <li><a href="#">سفارشات</a></li>
+                                    <li><a href="#">آدرس</a></li>
+                                    <li><a href="#">علاقه مندی</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+
+
+
+                    <li><a href="#">وبلاگ</a><i class='bx bx-chevron-down'></i>
+                        <ul>
+                            <li><a href="#">لیست وبلاگ 1</a></li>
+                            <li><a href="#">لیست وبلاگ 2</a></li>
+                            <li><a href="#">لیست وبلاگ 3</a></li>
+                            <li><a href="#">لیست وبلاگ 4</a></li>
+                            <li><a href="#">وبلاگ تکی 1</a></li>
+                            <li><a href="#">وبلاگ تکی 2</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+
+
+
+            </div>
+
+
+
+
+            <div>
+                <ul>
+                    <li><a href="#">تخفیفات</a></li>
+                    <li><a href="#">داغ ترین ها</a></li>
+                    <li><a href="#">محصولات پرفروش</a></li>
+                    <li><a href="#">جدیدترین ها</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+
+        <div>
+            <div>
+                <div><a href="#">زئومارت فارسی</a></div>
+
+                <div>
+                    <input type="search" value="جستجوی محصولات...">
+
+                    <select>
+                        <optgroup>
+                            <option selected>دسته بندی</option>
+                            <option>تجهیزات خودرو</option>
+                            <option>ساعت هوشمند</option>
+                            <option>کالای دیجیتال</option>
+                            <option>موبیال</option>
+                            <option>هدفون</option>
+                            <option>کالای سوپر مارکت</option>
+                            <option>صبحانه</option>
+                            <option>میوه</option>
+                            <option>لوازم منزل</option>
+                        </optgroup>
+                    </select>
+
+                    <div><a href="#"><i class='bx bx-search'></i></a></div>
+                </div>
+            </div>
+
+
+            <div>
+                <div><i class='bx bx-menu-alt-right'></i><a href="#">دسته بندی ها</a></div>
+                <div>
+                    <div><a href="#">خانه</a><i class='bx bx-chevron-down'></i></div>
+                    <div><a href="#">فروشگاه</a><i class='bx bx-chevron-down'></i></div>
+                    <div><a href="#">صفحات</a><i class='bx bx-chevron-down'></i></div>
+                    <div><a href="#">وبلاگ</a><i class='bx bx-chevron-down'></i></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div>
+            <div>
+                <div>
+                    <a href="#"><i class='bx bx-menu-alt-right'></i></a>
+                    <a href="#">زئومارت فارسی</a>
+                </div>
+                <div>
+                    <div><a href="#">0</a></div>
+                    <div><a href="#"><i class='bx bxs-cart-alt'></i></a></div>
+                    <div><a href="#"><i class='bx bx-user'></i></a></div>
+                </div>
+            </div>
+            <div>
+                <div><a href="#"><i class='bx bx-search'></i></a></div>
+                <input type="search" value="جستجوی محصولات...">
+            </div>
+        </div>
+    </nav>
+
+
+
+    <main>
+
+
+        <div id="hero">
+            <div>
+                <div>
+
+                    <a href=""> <img src="/assets/img/hero1.jpg"></img></a>
+                    <div>
+                        <a href="#">هدفون اونیکوما مدل k10 Pro</a>
+                        <span>از 50000 هزار تومان تا 80000 هزار تومان</span>
+                        <button><a href="#">انتخاب گزینه ها</a></button>
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <a href=""> <img src="/assets/img/hero2.png " width="170px"></img></a>
+                        <div>
+                            <span>شروع از 700000 تومان</span>
+                            <a href="#">ساعت هوشمند سامسونگ</a>
+                            <a href="#">افزودن به سبد خرید</a>
+                        </div>
+                    </div>
+                    <div>
+                        <a href=""> <img src="/assets/img/hero3.png" width="170px"></img></a>
+                        <div>
+                            <span>شروع از 610000 تومان</span>
+                            <a href="#">ساعت هوشمند سامسونگ</a>
+                            <a href="#">افزودن به سبد خرید</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div>
+                        <img src="/assets/img/hero7.jpg" width="170px"></img>
+                        <div>
+                            <span>شروع از 830000 تومان</span>
+                            <a href="#">ساعت هوشمند سامسونگ</a>
+                            <a href="#">افزودن به سبد خرید</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/assets/img/hero6.jpg" width="170px"></img>
+                        <div>
+                            <span>شروع از 630000 تومان</span>
+                            <a href="#">ساعت هوشمند سامسونگ</a>
+                            <a href="#">افزودن به سبد خرید</a>
+                        </div>
+                    </div>
+                    <div>
+                        <img src="/assets/img/hero5.jpg" width="170px"></img>
+                        <div>
+                            <span>شروع از 840000 تومان</span>
+                            <a href="#">ساعت هوشمند سامسونگ</a>
+                            <a href="#">افزودن به سبد خرید</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <img src="/assets/img/hero4.jpg" width="170px"></img>
+                    <div>
+                        <span>شروع از 930000 تومان</span>
+                        <a href="#">ساعت هوشمند سامسونگ</a>
+                        <a href="#">افزودن به سبد خرید</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="categories1">
+
+            <div>
+                <h3>خرید بر اساس دسته بندی </h3>
+                <span>مشاهده همه</span>
+            </div>
+
+            <div>
+
+                <div>
+                    <img src="/assets/img/categories1.png">
+                    <div>
+                        <a>اپل</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories2.png">
+                    <div>
+                        <a>سامسونگ</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories3.png">
+                    <div>
+                        <a>سونی</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories4.png">
+                    <div>
+                        <a>نایک</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories5.png">
+                    <div>
+                        <a>آدیداس</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories6.png">
+                    <div>
+                        <a>شیائومی</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories7.png">
+                    <div>
+                        <a>ری بن</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories8.png">
+                    <div>
+                        <a>رولکس</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories10.png">
+                    <div>
+                        <a>تیمبرلند</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories9.png">
+                    <div>
+                        <a>فور اور</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div id="bestseller">
+
+            <div>
+                <h3>پرفروش های این ماه</h3>
+                <div>
+                    <a href="#">برترین ها</a>
+                    <a href="#">لوازم موبایل</a>
+                    <a href="#">ساعت</a>
+                    <a href="#">همه</a>
+                </div>
+            </div>
+            <div>
+                <ul class="owl-carousel">
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/bedtseller5.jpg">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">جارو برقی بوش</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/bedtseller3.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">مبل راحتی 8 نفره</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/bedtseller2.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">مبل راحتی 6 نفره</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/bedtseller4.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">مبل راحتی 6 نفره</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/bedtseller1.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">صندلی تیس مدل 37</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/bedtseller6.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">صندلی تیس مدل 37</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- <div>
+                <div>
+                    <div>
+                        <a href="#"><i class='bx bx-heart'></i></a>
+                        <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                        <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                    </div>
+                    <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                </div>
+
+                <div>
+                    <div>
+                        <a href="#"><i class='bx bx-heart'></i></a>
+                        <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                        <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                    </div>
+                    <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                </div>
+
+                <div>
+                    <div>
+                        <a href="#"><i class='bx bx-heart'></i></a>
+                        <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                        <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                    </div>
+                    <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                </div>
+
+                <div>
+                    <div>
+                        <a href="#"><i class='bx bx-heart'></i></a>
+                        <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                        <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                    </div>
+                    <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                </div>
+
+                <div>
+                    <div>
+                        <a href="#"><i class='bx bx-heart'></i></a>
+                        <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                        <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                    </div>
+                    <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                </div>
+            </div>
+ -->
+
+        </div>
+
+
+        <div id="digital">
+
+            <div>
+                <h3>محصولات دیجیتال</h3>
+                <div>
+                    <a href="#">برترین ها</a>
+                    <a href="#">لوازم موبایل</a>
+                    <a href="#">ساعت</a>
+                    <a href="#">همه</a>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <span>شروع از 1 میلیون</span>
+                    <span> محصولات دیجیتال</span>
+                    <a href="#">سفارش</a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital1.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند Z66 Ultra</a>
+                            <span>630000 تومان</span>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <a href="#"><i class='bx bx-heart'></i></a>
+                                    <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                                    <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                                </div>
+                                <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                            </div>
+                            <div><a href="#">افزودن به سبد خرید</a></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital2.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل 8</a>
+                            <span>460000 تومان</span>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <a href="#"><i class='bx bx-heart'></i></a>
+                                    <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                                    <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                                </div>
+                                <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                            </div>
+                            <div><a href="#">افزودن به سبد خرید</a></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital3.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل SE</a>
+                            <span>2890000 تومان</span>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <a href="#"><i class='bx bx-heart'></i></a>
+                                    <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                                    <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                                </div>
+                                <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                            </div>
+                            <div><a href="#">افزودن به سبد خرید</a></div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital4.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل SE</a>
+                            <span>975000 تومان</span>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <a href="#"><i class='bx bx-heart'></i></a>
+                                    <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                                    <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                                </div>
+                                <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                            </div>
+                            <div><a href="#">افزودن به سبد خرید</a></div>
+                            </di>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital5.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند سامسونگ سیلیکونی</a>
+                            <span>840000 تومان</span>
+                        </div>
+                        <div>
+                            <div>
+                                <div>
+                                    <a href="#"><i class='bx bx-heart'></i></a>
+                                    <a href="#"><i class='bx bx-low-vision'></i></i></a>
+                                    <a href="#"><i class='bx bx-bar-chart-alt-2'></i></i></a>
+                                </div>
+                                <a href="#"><i class='bx bx-camera'></i></i></i></a>
+                            </div>
+                            <div><a href="#">افزودن به سبد خرید</a></div>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+
+
+
+        <div id="furniture">
+
+            <div>
+                <h3>مبلمان منزل</h3>
+                <div>
+                    <a href="#">برترین ها</a>
+                    <a href="#">لوازم موبایل</a>
+                    <a href="#">ساعت</a>
+                    <a href="#">همه</a>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <span>شروع از 1 میلیون</span>
+                    <span> مبلمان منزل</span>
+                    <a href="#">سفارش</a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital1.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند Z66 Ultra</a>
+                            <span>630000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital2.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل 8</a>
+                            <span>460000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital3.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل SE</a>
+                            <span>2890000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital4.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل SE</a>
+                            <span>975000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital5.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند سامسونگ سیلیکونی</a>
+                            <span>840000 تومان</span>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="beauty">
+
+            <div>
+                <h3>آرایشی بهداشتی</h3>
+                <div>
+                    <a href="#">برترین ها</a>
+                    <a href="#">لوازم موبایل</a>
+                    <a href="#">ساعت</a>
+                    <a href="#">همه</a>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <span>شروع از 1 میلیون</span>
+                    <span> آرایشی بهداشتی</span>
+                    <a href="#">سفارش</a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital1.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند Z66 Ultra</a>
+                            <span>630000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital2.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل 8</a>
+                            <span>460000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital3.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل SE</a>
+                            <span>2890000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital4.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل SE</a>
+                            <span>975000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital5.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند سامسونگ سیلیکونی</a>
+                            <span>840000 تومان</span>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+
+        <div id="clothing">
+
+            <div>
+                <h3>پوشاک</h3>
+                <div>
+                    <a href="#">برترین ها</a>
+                    <a href="#">لوازم موبایل</a>
+                    <a href="#">ساعت</a>
+                    <a href="#">همه</a>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <span>شروع از 1 میلیون</span>
+                    <span> پوشاک</span>
+                    <a href="#">سفارش</a>
+                </div>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital1.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند Z66 Ultra</a>
+                            <span>630000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital2.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل 8</a>
+                            <span>460000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital3.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل SE</a>
+                            <span>2890000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital4.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند اپل SE</a>
+                            <span>975000 تومان</span>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="/assets/img/digital5.jpg">
+                        </a>
+                        <div>
+                            <a href="#">ساعت هوشمند</a>
+                            <a href="#">ساعت هوشمند سامسونگ سیلیکونی</a>
+                            <span>840000 تومان</span>
+                        </div>
+                    </li>
+
+
+                </ul>
+            </div>
+
+        </div>
+
+
+
+
+        <div id="categories2">
+            <div>
+                <h3>خرید بر اساس دسته بندی </h3>
+                <span>مشاهده همه</span>
+            </div>
+            <div>
+
+                <div>
+                    <img src="/assets/img/categories11.png">
+                    <div>
+                        <a>الکترونیک</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories12.png">
+                    <div>
+                        <a>پوشاک</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories13.png">
+                    <div>
+                        <a>بهداشت</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories14.png">
+                    <div>
+                        <a>خانه</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories15.png">
+                    <div>
+                        <a>مبلمان</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories16.png">
+                    <div>
+                        <a>خوراکی</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories17.png">
+                    <div>
+                        <a>بازی</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories18.png">
+                    <div>
+                        <a>کودک</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories19.png">
+                    <div>
+                        <a>ورزش</a>
+                        <a>16 محصول</a>
+                    </div>
+                </div>
+                <div>
+                    <img src="/assets/img/categories20.png">
+                    <div>
+                        <a>خودرو</a>
+                        <a>16 محصول</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+        <div id="last">
+
+            <div>
+                <h3>آخرین محصولات</h3>
+                <div>
+                    <a href="#">برترین ها</a>
+                    <a href="#">لوازم موبایل</a>
+                    <a href="#">ساعت</a>
+                    <a href="#">همه</a>
+                </div>
+            </div>
+            <div class="swiper">
+                <ul class="swiper-wrapper">
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="/assets/img/bedtseller5.jpg">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">جارو برقی بوش</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="/assets/img/bedtseller3.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">مبل راحتی 8 نفره</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="/assets/img/bedtseller2.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">مبل راحتی 6 نفره</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="/assets/img/bedtseller4.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">مبل راحتی 6 نفره</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="/assets/img/bedtseller1.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">صندلی تیس مدل 37</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                    <li class="swiper-slide">
+                        <a href="#">
+                            <img src="/assets/img/bedtseller6.webp">
+                        </a>
+                        <div>
+                            <a href="#">لوازم منزل</a>
+                            <a href="#">صندلی تیس مدل 37</a>
+                            <span>185000 تومان</span>
+                        </div>
+                    </li>
+                </ul>
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
+
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+
+                <!-- If we need scrollbar -->
+                <div class="swiper-scrollbar"></div>
+            </div>
+
+        </div>
+
+
+        <div id="specification">
+            <div>
+                <div>
+                    <div><i class='bx bxs-truck'></i></div>
+                    <div>
+                        <span>ارسال رایگان</span>
+                        <span>ارسال رایگان بالای 300 هزار تومان</span>
+                    </div>
+                </div>
+                <div>
+                    <div><i class='bx bx-notepad'></i></div>
+                    <div>
+                        <span>ضمانت وجه</span>
+                        <span>بازگشت وجه تا 30 روز
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div><i class='bx bxs-user'></i></div>
+                    <div>
+                        <span>پشتیبانی آنلاین</span>
+                        <span>24 ساعت 7 روز هفته</span>
+                    </div>
+                </div>
+                <div>
+                    <div><i class='bx bxs-wallet'></i></div>
+                    <div>
+                        <span>پرداخت آسان</span>
+                        <span>پرداخت از طریق درگاه آنلاین</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div>
+            <h4>تخفیف ویژه با عضویت در خبرنامه</h4>
+            <div>
+                <input type="email" placeholder="ایمیل شما">
+                <div><a href="#">عضویت</a></div>
+            </div>
+
+        </div>
+
+
+        <div>
+
+            <div>
+                <span> تماس با ما</span>
+                <div>
+                    <div>
+                        <i class='bx bxs-phone-call'></i>
+                    </div>
+                    <div>
+                        <span>شنبه تا چهارشنبه: 8 صبح تا 6 عصر</span>
+                        <span>09179170917</span>
+                    </div>
+                </div>
+                <div>
+                    <div><i class='bx bx-mail-send'></i></div>
+                    <div>
+                        <span>
+                            پشتیبانی از طریق ایمیل</span>
+                        <span>SUPPORT@ZEOMART.COM</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <span>درباره زئومارت</span>
+                    <div>
+
+                        <a href="#">رهگیری سفارش</a></li>
+                        <a href="#">آدرس فروشگاه</a></li>
+                        <a href="#">علاقه مندی ها</a></li>
+                        <a href="#">حریم خصوصی</a></li>
+
+                    </div>
+                </div>
+                <div>
+                    <span>خدمات مشتریان</span>
+                    <div>
+
+                        <a href="#">تماس با ما</a></li>
+                        <a href="#">راهنمایی</a></li>
+                        <a href="#">بازگشت وجه</a></li>
+                        <a href="#">فروشنده شوید</a></li>
+
+                    </div>
+                </div>
+                <div>
+                    <span>دسترسی سریع</span>
+                    <div>
+
+                        <a href="#">راهنمایی</a></li>
+                        <a href="#">شرایط و ضوابط</a></li>
+                        <a href="#">پیگیری سفارش</a></li>
+                        <a href="#">مقایسه محصولات</a></li>
+
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div>
+                    <span>شبکه های اجتماعی</span>
+                    <div>
+                        <div><a href="#"><i class='bx bxl-twitter'></i></a></div>
+                        <div><a href="#"><i class='bx bxl-skype'></i></a></div>
+                        <div><a href="#"><i class='bx bxl-facebook'></i></a></div>
+                        <div><a href="#"><i class='bx bxs-envelope'></i></a></div>
+                    </div>
+                </div>
+                <div>
+                    <span>پرداخت از طریق</span>
+                    <div>
+                        <img src="/assets/img/footer.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+        <div>
+            <div>
+                <div>
+                    <h4>تخفیف ویژه با عضویت در خبرنامه</h4>
+                    <div>
+                        <input type="email" placeholder="ایمیل شما">
+                        <div><a href="#">عضویت</a></div>
+                    </div>
+                </div>
+
+                <div>
+                    <span>درباره زئومارت</span>
+                    <div>
+
+                        <a href="#">رهگیری سفارش</a></li>
+                        <a href="#">آدرس فروشگاه</a></li>
+                        <a href="#">علاقه مندی ها</a></li>
+                        <a href="#">حریم خصوصی</a></li>
+
+                    </div>
+                </div>
+                <div>
+                    <span>دسترسی سریع</span>
+                    <div>
+
+                        <a href="#">راهنمایی</a></li>
+                        <a href="#">شرایط و ضوابط</a></li>
+                        <a href="#">پیگیری سفارش</a></li>
+                        <a href="#">مقایسه محصولات</a></li>
+
+                    </div>
+                </div>
+            </div>
+
+
+            <div>
+
+                <div>
+                    <span> تماس با ما</span>
+                    <div>
+                        <div>
+                            <i class='bx bxs-phone-call'></i>
+                        </div>
+                        <div>
+                            <span>شنبه تا چهارشنبه: 8 صبح تا 6 عصر</span>
+                            <span>09179170917</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div><i class='bx bx-mail-send'></i></div>
+                        <div>
+                            <span>
+                                پشتیبانی از طریق ایمیل</span>
+                            <span>SUPPORT@ZEOMART.COM</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <span>خدمات مشتریان</span>
+                    <div>
+
+                        <a href="#">تماس با ما</a></li>
+                        <a href="#">راهنمایی</a></li>
+                        <a href="#">بازگشت وجه</a></li>
+                        <a href="#">فروشنده شوید</a></li>
+
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <span>شبکه های اجتماعی</span>
+                        <div>
+                            <div><a href="#"><i class='bx bxl-twitter'></i></a></div>
+                            <div><a href="#"><i class='bx bxl-skype'></i></a></div>
+                            <div><a href="#"><i class='bx bxl-facebook'></i></a></div>
+                            <div><a href="#"><i class='bx bxs-envelope'></i></a></div>
+                        </div>
+                    </div>
+                    <div>
+                        <span>پرداخت از طریق</span>
+                        <div>
+                            <img src="/assets/img/footer.png">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="assets/JQ/jquery-3.7.1.js"></script>
+    <script src="assets/vendor/owl/owl.carousel.js"></script>
+    <script src="/assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- <script type="module">
+     import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+   
+     const swiper = new Swiper(...)
+   </script> -->
+
+
+    <script>
+        $(document).ready(function () {
+            $("nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)").click(function () {
+                $("ul", this).stop().fadeIn("normal")
+            })
+            $("nav>div:nth-child(2)>div:nth-child(1)>div:nth-child(1)").hover(function () {
+                $("ul", this).stop().fadeOut("normal")
+            })
+
+            $("nav>div:nth-child(2)>div:nth-child(1) ul li:last-of-type").click(function () {
+                $("ul", this).stop().fadeIn("normal")
+            })
+            $("nav>div:nth-child(2)>div:nth-child(1) ul").hover(function () {
+                $("ul", this).stop().fadeOut("normal")
+            })
+
+            $("nav>div:nth-child(2)>div:nth-child(1) ul li:first-child").click(function () {
+                $("ul", this).stop().fadeIn("normal")
+            })
+            $("nav>div:nth-child(2)>div:nth-child(1) ul").hover(function () {
+                $("ul", this).stop().fadeOut("normal")
+            })
+
+            $("nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(2)").click(function () {
+                $("div", this).stop().fadeIn("normal")
+                $("div", this).css({ "display": "flex", "flex-direction": "row" })
+                $("div ul", this).css({ "display": "flex", "flex-direction": "column", "margin-top": "50px" })
+            })
+            $("nav>div:nth-child(2)>div:nth-child(1) ul").hover(function () {
+                $("div", this).stop().fadeOut("normal")
+            })
+
+            $("nav>div:nth-child(2)>div:nth-child(1) ul>li:nth-child(3)").click(function () {
+                $("div", this).stop().fadeIn("normal")
+            })
+            $("nav>div:nth-child(2)>div:nth-child(1) ul").hover(function () {
+                $("div", this).stop().fadeOut("normal")
+                $("div", this).css({ "display": "flex", "flex-direction": "row" })
+                $("div ul", this).css({ "display": "flex", "flex-direction": "column", "margin-top": "40px" })
+            })
+
+            $("main #bestseller .owl-carousel").owlCarousel({
+                loop: true,
+                rtl: true,
+                autowidth: true,
+                autoplay: true,
+                autoplayTimeout: 2000,
+                smartSpeed: 1000,
+                "responsive": {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            });
+        })
+
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 5,
+            // Optional parameters
+            //   direction: 'vertical',
+            loop: true,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // And if we need scrollbar
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        });
+    </script>
+</body>
+
+</html>
